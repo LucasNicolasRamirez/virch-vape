@@ -1,0 +1,36 @@
+.infoPago {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px, solid;
+    padding: 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.infoPago span{
+    font-weight: bold;
+}
+
+.copiar:hover{
+    cursor: pointer;
+    color: rgb(2, 153, 153);
+    transition: all 0.3s;
+
+}
+.copyIcon {
+  opacity: 0; 
+  transition: opacity 0.3s; 
+}
+
+.copiar:hover .copyIcon {
+  opacity: 1; 
+}
+.alertContainer {
+  position: fixed;
+  bottom: 20px; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; 
+}
+

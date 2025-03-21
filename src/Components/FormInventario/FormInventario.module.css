@@ -1,0 +1,22 @@
+
+.scrollable {
+    max-height: 95vh; 
+    overflow-y: auto; 
+
+    &::-webkit-scrollbar {
+        width: 8px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #555; 
+        border-radius: 5px; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; 
+    }
+
+    scrollbar-color: #555 transparent; 
+    scrollbar-width: thin; 
+}
+

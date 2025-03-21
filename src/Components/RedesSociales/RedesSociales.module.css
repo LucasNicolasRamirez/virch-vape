@@ -1,0 +1,158 @@
+.tooltipContainer {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  border-radius: 10px;
+}
+
+.socialIconsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  gap: 90px; 
+  width: 100%;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border-radius: 15px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.profile {
+  height: 110px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 15px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.tooltipContainer:hover .tooltip {
+  top: -175px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon {
+  text-decoration: none;
+  color: currentColor;
+  display: block;
+  position: relative;
+}
+
+.layer {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+
+.icon:hover .layer {
+  transform: rotate(-35deg) skew(20deg);
+}
+
+.layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid currentColor;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.icon .text {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  opacity: 0;
+  font-weight: 500;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+
+.icon:hover .text {
+  bottom: -35px;
+  opacity: 1;
+}
+
+.icon:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.icon:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.icon:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+.icon:hover .layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+
+.icon:hover .layer span:nth-child(5) {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}
+
+.instagram,
+.whatsapp,
+.facebook,
+.gmail {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(40px);
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagenLogo{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.name {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.username {
+  padding-top: 5px;
+}
