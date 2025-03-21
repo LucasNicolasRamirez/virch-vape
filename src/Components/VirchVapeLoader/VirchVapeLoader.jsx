@@ -12,7 +12,7 @@ const VirchVape = () => {
             </div>
         </>
 
-    )
+    );
 
 }
 

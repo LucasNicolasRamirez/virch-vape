@@ -10,7 +10,7 @@ function Home() {
     return (
         <div className={styles.cuerpo}>
             <div className={styles.contenido}>
-                <Typography variant="h3"  gutterBottom sx={{ textAlign: 'center' }}>
+                <Typography variant="h3"  sx={{ textAlign: 'center', marginBottom: '20px' }}>
                     Bienvenido a VirchVape
                 </Typography>
 
