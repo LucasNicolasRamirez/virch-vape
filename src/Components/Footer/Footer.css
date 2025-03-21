@@ -1,7 +1,6 @@
 .pieDePag {
     width: 95%;
     position: relative;
-    font-family: 'Roboto', sans-serif;
     background-color: rgba(68, 68, 68, 0.8);
     backdrop-filter: blur(2px);
     padding: 10px;
@@ -9,10 +8,12 @@
     border-top-left-radius: 20px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     margin-top: auto;
+    align-items: center;
+    justify-items: center;
 }
 
 
-.developerInfo {
+/* .developerInfo {
     position: relative;
     display: flex;
     width: 100%;
@@ -69,4 +70,5 @@
     font-size: 1rem;
     font-weight: 500;
     color: currentColor;
-}
+} */
+
