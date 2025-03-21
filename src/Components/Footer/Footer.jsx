@@ -13,13 +13,13 @@ function Footer() {
                 <p>Teléfono: +54 9 11 1234-5678</p>
             </div>
 
-            <Divider color="gray" sx={{ width: '100%', margin: '10px 0' }} />
+            <Divider color="gray" sx={{ width: '95%', margin: '10px 0' }} />
 
             <p className={styles.developerText}> © 2025 Todos los derechos reservados</p>
 
             <div className={styles.developerInfo}>
                 <p className={styles.infoDev}>Desarrollado por</p>
-                <a className={styles.developerLink} href="https://portafolio-eosin-two.vercel.app" target="_blank" rel="noopener noreferrer">
+                <a className={styles.developerLink} href="https://portafolio-eosin-two.vercel.app" target="_blank" >
                     <p className={styles.logoContainer}>
                         LR.DEV
                     </p>
