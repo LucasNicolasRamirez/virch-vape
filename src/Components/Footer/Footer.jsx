@@ -5,7 +5,7 @@ function Footer() {
     return (
 
 
-        <footer className={styles.pieDePag}>
+        <div className={styles.pieDePag}>
 
             <div className={styles.contactInfo}>
                 <h3 className={styles.tituloVirch} >VirchVape</h3>
@@ -25,7 +25,7 @@ function Footer() {
                     </p>
                 </a>
             </div>
-        </footer>
+        </div>
 
     );
 };
