@@ -1,10 +1,6 @@
-footer {
+.pieDePag {
     width: 95%;
     position: relative;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
     font-family: 'Roboto', sans-serif;
     background-color: rgba(68, 68, 68, 0.8);
     backdrop-filter: blur(2px);
@@ -13,24 +9,9 @@ footer {
     border-top-left-radius: 20px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     margin-top: auto;
-    /* box-sizing: border-box ; */
 }
 
-/* .footerLinks,
-.footerLink {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;  
-    text-decoration: none;
-    color: currentColor;
-}
 
-.footerLink:hover {
-    color: #0288d1;
-    transition: all 0.5s;
-} */
 .developerInfo {
     position: relative;
     display: flex;
