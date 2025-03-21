@@ -44,8 +44,8 @@ function AppContent() {
                       <Route path='/inventario' element={<Inventario />} />
                   </Routes>
               )}
-          </div>
           <Footer />
+          </div>
       </>
   );
 }
