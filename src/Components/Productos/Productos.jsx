@@ -59,8 +59,9 @@ function Productos() {
                     onClick={handleToggle}
                     endIcon={<ArrowDropDownIcon />}
                     sx={{
-                        color: "#cecece",
+                        color: "currentColor",
                         borderRadius: "20px",
+                        fontSize: '1rem'
                     }}
                 >
                     Productos
@@ -97,6 +98,8 @@ function Productos() {
                                         onKeyDown={handleListKeyDown}
                                         sx={{
                                             color: "#cecece",
+                                            fontSize: '1rem'
+
                                         }}
                                     >
                                         <MenuItem onClick={() => handleCategorySelect('Todos los productos')}>Todos los productos</MenuItem>
