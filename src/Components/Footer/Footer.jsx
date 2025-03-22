@@ -21,9 +21,9 @@ const Footer = () => {
         >
             <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
                 <Box >
-                    <Typography className={styles.developerLink}  >
+                    <a className={styles.developerLink}  >
                         VirchVape
-                    </Typography>
+                    </a>
                 </Box>
                 <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Contacto: info@virchvape.com
