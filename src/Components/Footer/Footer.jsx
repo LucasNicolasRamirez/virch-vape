@@ -21,7 +21,7 @@ const Footer = () => {
         >
             <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
                 <Box >
-                    <a className={styles.developerLink1}  >
+                    <a className={styles.developerLink}  >
                         VirchVape
                     </a>
                 </Box>
