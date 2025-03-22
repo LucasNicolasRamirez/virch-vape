@@ -1,5 +1,7 @@
 .loginHamb{
     display: none;
+    opacity: 0;
+    visibility: none;
 }
 
 /* Media query para pantallas pequeñas */
@@ -7,6 +9,8 @@
 
     .loginHamb{
         display: flex;
+        visibility: visible;
+        opacity: 1;
         width: 100%;
         align-items: center;
     }
