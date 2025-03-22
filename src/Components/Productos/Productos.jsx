@@ -38,9 +38,10 @@ function Productos() {
     const handleCategorySelect = (categoria) => {
         setOpen(false);
         navigate(`/productos/${categoria.toLowerCase().replace(/\s+/g, '-')}`);
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 0);
+        if (typeof handleClose === 'function') {
+            handleClose(); 
+        }
+        window.scrollTo(0, 0);
     };
 
     useEffect(() => {
@@ -48,82 +49,94 @@ function Productos() {
     }, []);
 
     return (
-        <Stack direction="row" spacing={2}>
-            <div>
-                <Button
-                    ref={anchorRef}
-                    id="composition-button"
-                    aria-controls={open ? 'composition-menu' : undefined}
-                    aria-expanded={open ? 'true' : undefined}
-                    aria-haspopup="true"
-                    onClick={handleToggle}
-                    endIcon={<ArrowDropDownIcon />}
-                    sx={{
-                        color: "#cecece",
-                        borderRadius: "20px",
-                        fontSize: '0,75rem'
-                    }}
-                >
-                    Productos
-                </Button>
-                <Popper
-                    open={open}
-                    anchorEl={anchorRef.current}
-                    role={undefined}
-                    placement="bottom-start"
-                    transition
-                    disablePortal
-                >
-                    {({ TransitionProps, placement }) => (
-                        <Grow
-                            {...TransitionProps}
-                            style={{
-                                transformOrigin:
-                                    placement === 'bottom-start' ? 'left top' : 'left bottom',
+        <div>
+            <Button
+                ref={anchorRef}
+                id="composition-button"
+                aria-controls={open ? 'composition-menu' : undefined}
+                aria-expanded={open ? 'true' : undefined}
+                aria-haspopup="true"
+                onClick={handleToggle}
+                endIcon={<ArrowDropDownIcon />}
+                sx={{
+                    color: "#cecece",
+                    borderRadius: "20px",
+                    fontSize: '0,75rem',
+                    '@media (max-width: 1280px)': {
+                        color: "currentColor",
+                    },
+                }}
+
+            >
+                Productos
+            </Button>
+            <Popper
+                open={open}
+                anchorEl={anchorRef.current}
+                role={undefined}
+                placement="bottom-start"
+                transition
+                disablePortal
+            >
+                {({ TransitionProps, placement }) => (
+                    <Grow
+                        {...TransitionProps}
+                        style={{
+                            transformOrigin:
+                                placement === 'bottom-start' ? 'left top' : 'left bottom',
+                        }}
+                    >
+                        <Paper
+                            sx={{
+                                backgroundColor: "rgba(68, 68, 68, 0.8)",
+                                backdropFilter: "blur(2px)",
+                                boxShadow: "0 4px 10px rgba(0, 0, 0, 0.6)",
+                                borderRadius: "20px",
+                                '@media (max-width: 1280px)': {
+                                            backgroundColor: "rgba(68, 68, 68, 1)",
+                                            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.6)",
+                                            borderRadius: "20px",
+                                            marginLeft: "100px",
+                                            zIndex: 1000,
+                                        },
                             }}
                         >
-                            <Paper
-                                sx={{
-                                    backgroundColor: "rgba(68, 68, 68, 0.8)",
-                                    backdropFilter: "blur(2px)",
-                                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.6)",
-                                    borderRadius: "20px",
-                                }}
-                            >
-                                <ClickAwayListener onClickAway={handleClose}>
-                                    <MenuList
-                                        autoFocusItem={open}
-                                        id="composition-menu"
-                                        aria-labelledby="composition-button"
-                                        onKeyDown={handleListKeyDown}
-                                        sx={{
-                                            color: "#cecece",
-                                            fontSize: '0,75rem'
+                            <ClickAwayListener onClickAway={handleClose}>
+                                <MenuList
+                                    autoFocusItem={open}
+                                    id="composition-menu"
+                                    aria-labelledby="composition-button"
+                                    onKeyDown={handleListKeyDown}
+                                    sx={{
+                                        color: "#cecece",
+                                        fontSize: '0,75rem',
+                                        '@media (max-width: 1280px)': {
+                                            borderRadius: "20px",
+                                        },
 
-                                        }}
-                                    >
-                                        <MenuItem onClick={() => handleCategorySelect('Todos los productos')}>Todos los productos</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Liquidos')}>Liquidos</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Sales')}>Sales</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Pods Descartables')}>Pods Descartables</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Pods Recargables')}>Pods Recargables</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Kits de inicio')}>Kits de inicio</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Kits avanzados')}>Kits avanzados</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Mods')}>Mods</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Atomizadores')}>Atomizadores</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Baterías')}>Baterías</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Cargadores')}>Cargadores</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Consumibles')}>Consumibles</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Accesorios')}>Accesorios</MenuItem>
-                                        <MenuItem onClick={() => handleCategorySelect('Otros')}>Otros</MenuItem>
-                                    </MenuList>
-                                </ClickAwayListener>
-                            </Paper>
-                        </Grow>
-                    )}
-                </Popper>
-            </div>
-        </Stack>
+                                    }}
+                                >
+                                    <MenuItem onClick={() => handleCategorySelect('Todos los productos')}>Todos los productos</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Liquidos')}>Liquidos</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Sales')}>Sales</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Pods Descartables')}>Pods Descartables</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Pods Recargables')}>Pods Recargables</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Kits de inicio')}>Kits de inicio</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Kits avanzados')}>Kits avanzados</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Mods')}>Mods</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Atomizadores')}>Atomizadores</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Baterías')}>Baterías</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Cargadores')}>Cargadores</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Consumibles')}>Consumibles</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Accesorios')}>Accesorios</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Otros')}>Otros</MenuItem>
+                                </MenuList>
+                            </ClickAwayListener>
+                        </Paper>
+                    </Grow>
+                )}
+            </Popper>
+        </div>
     );
 }
 export default Productos;

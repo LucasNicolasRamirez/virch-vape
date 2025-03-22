@@ -7,6 +7,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Pages/HomePage';
 import Productos from './Pages/ProductosPage';
 import ContactoPage from './Pages/ContactoPage';
+import IniciarSesion from './Pages/IniciarSesion';
 import PerfilUser from './Pages/PerfilUser';
 import Producto from './Pages/Producto';
 import { ProveedorTema } from '../src/Components/ContextoTema/ContextoTema';
@@ -38,6 +39,7 @@ function AppContent() {
                       <Route path='/productos' element={<Productos />} />
                       <Route path='/productos/:categoria' element={<Productos />} />
                       <Route path='/contacto' element={<ContactoPage />} />
+                      <Route path='/iniciar-sesion' element={<IniciarSesion />} />
                       <Route path='/perfil' element={<PerfilUser />} />
                       <Route path='/producto' element={<Producto />} />
                       <Route path='/carrito' element={<Carrito />} />

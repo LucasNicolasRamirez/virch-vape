@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 const CartBadge = styled(Badge)`
   & .${badgeClasses.badge} {
-    top: -12px;
-    right: -6px;
+    top: -0.75rem;
+    right: -0.1rem;
   }
 `;
 
@@ -23,7 +23,7 @@ function IconoCarrito() {
     };
 
     return (
-        <div style={{ paddingRight: '20px'}}>
+        <div style={{ paddingRight: '1.2rem'}}>
             <IconButton onClick={handleCartClick} style={{ color: '#cecece' }}> 
                 <ShoppingCartIcon fontSize="large" />
                 <CartBadge badgeContent={3} color="info" overlap="circular" />

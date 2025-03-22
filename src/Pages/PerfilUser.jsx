@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from '../Components/Cuerpo/Cuerpo.module.css';
-import FormularioUser from '../Components/Formulario/FormularioUser';
+import { Typography } from '@mui/material';
 
 function PerfilUser() {
     return (
         <div className={styles.cuerpo}>
             <div className={styles.contenido}>
-                <FormularioUser/>
+                <Typography variant='h2' sx={{ textAlign: 'center' }}>PERFIL DE USUARIO</Typography>
+                <Typography variant='h2' sx={{ textAlign: 'center' }}>PROXIMAMENTE</Typography>
             </div>
         </div>
     );
