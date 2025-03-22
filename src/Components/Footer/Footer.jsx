@@ -19,17 +19,15 @@ const Footer = () => {
                 boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.3)",
             }}
         >
-            <Box sx={{ justifyItems:'center' ,justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
-            <Box >
-                    <a className={styles.tituloVirch}  >
+            <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                    <a className={styles.tituloVirchFooter}  >
                         VirchVape
                     </a>
-                </Box>
                 <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Contacto: info@virchvape.com
                 </Typography>
 
-                <Typography variant="body1" sx={{  justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
+                <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Teléfono: +54 9 11 1234-5678
                 </Typography>
             </Box>
