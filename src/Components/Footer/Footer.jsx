@@ -20,9 +20,11 @@ const Footer = () => {
             }}
         >
             <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box >
                     <a className={styles.tituloVirchFooter}  >
                         VirchVape
                     </a>
+                </Box>
                 <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Contacto: info@virchvape.com
                 </Typography>
