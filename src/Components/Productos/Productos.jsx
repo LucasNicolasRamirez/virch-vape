@@ -61,7 +61,7 @@ function Productos() {
                     sx={{
                         color: "currentColor",
                         borderRadius: "20px",
-                        fontSize: '1rem'
+                        fontSize: '0,75rem'
                     }}
                 >
                     Productos
@@ -98,7 +98,7 @@ function Productos() {
                                         onKeyDown={handleListKeyDown}
                                         sx={{
                                             color: "#cecece",
-                                            fontSize: '1rem'
+                                            fontSize: '0,75rem'
 
                                         }}
                                     >

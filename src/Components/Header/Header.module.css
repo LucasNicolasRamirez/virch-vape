@@ -43,7 +43,7 @@
 .title {
     grid-column: 2;
     font-family: 'Libre Barcode 39 Extended Text', serif;
-    font-size: 4rem;
+    font-size: 3rem;
     color: currentColor;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     justify-self: center;
