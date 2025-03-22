@@ -25,11 +25,11 @@ const Footer = () => {
                         VirchVape
                     </a>
                 </Box>
-                <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
+                <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Contacto: info@virchvape.com
                 </Typography>
 
-                <Typography variant="body1" sx={{  justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
+                <Typography variant="body1" sx={{  justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Teléfono: +54 9 11 1234-5678
                 </Typography>
             </Box>
