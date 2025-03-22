@@ -10,7 +10,7 @@ const Footer = () => {
                 width: "95%",
                 bgcolor: "rgba(68, 68, 68, 0.8)",
                 color: "currentColor",
-                py: 1,
+                py: 4,
                 margin: "0 auto",
                 mt: "auto",
                 backdropFilter: "blur(2px)",
