@@ -20,21 +20,21 @@ const Footer = () => {
             }}
         >
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
-                
-                <a className={styles.tituloVirch}  >
-                    VirchVape
-                </a>
-
-                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
+                <Box>
+                    <p className={styles.tituloVirch}  >
+                        VirchVape
+                    </p>
+                </Box>
+                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Contacto: info@virchvape.com
                 </Typography>
 
-                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
+                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Teléfono: +54 9 11 1234-5678
                 </Typography>
             </Box>
 
-            <Divider color='gray' sx={{ width:'95%',margin:'auto' }} />
+            <Divider color='gray' sx={{ width: '95%', margin: 'auto' }} />
 
             <Box textAlign="center" mt={1}>
                 <Typography variant="body1">
@@ -43,9 +43,7 @@ const Footer = () => {
                 <Box sx={{ display: 'flex', justifyContent: 'end', marginRight: '90px', gap: '10px', alignItems: 'center' }} >
                     <Typography variant="body1" >Desarrollado por</Typography>
                     <a href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
-                        
-                            LR.DEV
-                        
+                        LR.DEV
                     </a>
                 </Box>
             </Box>
