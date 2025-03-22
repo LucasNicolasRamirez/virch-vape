@@ -1,103 +1,55 @@
-// import { Divider } from '@mui/material';
-// import styles from './Footer.module.css';
-
-// function Footer() {
-//     return (
-
-
-//         <div className={styles.pieDePag}>
-
-//             <div className={styles.contactInfo}>
-//                 <h3 className={styles.tituloVirch} >VirchVape</h3>
-//                 <p>Contacto: info@virchvape.com</p>
-//                 <p>Teléfono: +54 9 11 1234-5678</p>
-//             </div>
-
-//             <Divider color="gray" sx={{ width: '95%', margin: '10px 0' }} />
-
-//             <p className={styles.developerText}> © 2025 Todos los derechos reservados</p>
-
-//             <div className={styles.developerInfo}>
-//                 <p className={styles.infoDev}>Desarrollado por</p>
-//                 <a className={styles.developerLink} href="https://portafolio-eosin-two.vercel.app" target="_blank" >
-//                     <p className={styles.logoContainer}>
-//                         LR.DEV
-//                     </p>
-//                 </a>
-//             </div>
-//         </div>
-
-//     );
-// };
-
-// export default Footer;
-
 import React from "react";
-import { Box, Container, Typography, Link, Grid } from "@mui/material";
+import { Box, Container, Typography, Link, Grid, Divider } from "@mui/material";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
-  return (
-    <Box 
-      component="footer"
-      sx={{
-        bgcolor: "primary.main",
-        color: "white",
-        py: 4,
-        mt: "auto",
-      }}
-    >
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          {/* About Section */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
-              About Us
-            </Typography>
-            <Typography variant="body2">
-              We provide high-quality products and excellent customer service.
-            </Typography>
-          </Grid>
+    return (
+        <Box
+            component="footer"
+            sx={{
+                width: "95%",
+                bgcolor: "rgba(68, 68, 68, 0.8)",
+                color: "currentColor",
+                py: 1,
+                margin: "0 auto",
+                mt: "auto",
+                backdropFilter: "blur(2px)",
+                borderTopRightRadius: "20px",
+                borderTopLeftRadius: "20px",
+                boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.3)",
+            }}
+        >
+            <Box >
+                <Typography variant="body1" className={styles.tituloVirch} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
+                    VirchVape
+                </Typography>
 
-          {/* Links Section */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
-              Quick Links
-            </Typography>
-            <Box>
-              <Link href="#" color="inherit" underline="hover">
-                Home
-              </Link>
-            </Box>
-            <Box>
-              <Link href="#" color="inherit" underline="hover">
-                About
-              </Link>
-            </Box>
-            <Box>
-              <Link href="#" color="inherit" underline="hover">
-                Contact
-              </Link>
-            </Box>
-          </Grid>
+                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
+                    Contacto: info@virchvape.com
+                </Typography>
 
-          {/* Contact Section */}
-          <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>
-              Contact Us
-            </Typography>
-            <Typography variant="body2">Email: info@example.com</Typography>
-            <Typography variant="body2">Phone: +123 456 7890</Typography>
-          </Grid>
-        </Grid>
+                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
+                    Teléfono: +54 9 11 1234-5678
+                </Typography>
+            </Box>
 
-        <Box textAlign="center" mt={4}>
-          <Typography variant="body2">
-            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
-          </Typography>
+            <Divider color='gray' sx={{ width:'95%',margin:'auto' }} />
+
+            <Box textAlign="center" mt={1}>
+                <Typography variant="body1">
+                    &copy; {new Date().getFullYear()} VirchVape. Todos los derechos reservados.
+                </Typography>
+                <Box sx={{ display: 'flex', justifyContent: 'end', marginRight: '90px', gap: '10px', alignItems: 'center' }} >
+                    <Typography variant="body1" >Desarrollado por</Typography>
+                    <Link href="https://portafolio-eosin-two.vercel.app" target="_blank" sx={{ textDecoration: 'none', color: 'currentColor' }} >
+                        <Typography variant="body1" className={styles.developerLink} >
+                            LR.DEV
+                        </Typography>
+                    </Link>
+                </Box>
+            </Box>
         </Box>
-      </Container>
-    </Box>
-  );
+    );
 };
 
 export default Footer;
