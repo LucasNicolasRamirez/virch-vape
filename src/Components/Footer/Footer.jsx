@@ -19,24 +19,24 @@ const Footer = () => {
                 boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.3)",
             }}
         >
-            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+            <Box sx={{ justifyItems:'center' ,justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
                 <Box>
                     <p className={styles.tituloVirch}  >
                         VirchVape
                     </p>
                 </Box>
-                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
+                <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Contacto: info@virchvape.com
                 </Typography>
 
-                <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
+                <Typography variant="body1" sx={{  justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Teléfono: +54 9 11 1234-5678
                 </Typography>
             </Box>
 
             <Divider color='gray' sx={{ width: '95%', margin: 'auto' }} />
 
-            <Box textAlign="center" mt={1}>
+            <Box textAlign="center" mt={2}>
                 <Typography variant="body1">
                     &copy; {new Date().getFullYear()} VirchVape. Todos los derechos reservados.
                 </Typography>
