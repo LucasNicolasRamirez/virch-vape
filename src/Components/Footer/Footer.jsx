@@ -19,10 +19,11 @@ const Footer = () => {
                 boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.3)",
             }}
         >
-            <Box >
-                <Typography variant="body1" className={styles.tituloVirch} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                
+                <p className={styles.tituloVirch}  >
                     VirchVape
-                </Typography>
+                </p>
 
                 <Typography variant="body1" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'10px' }} >
                     Contacto: info@virchvape.com
@@ -41,11 +42,11 @@ const Footer = () => {
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'end', marginRight: '90px', gap: '10px', alignItems: 'center' }} >
                     <Typography variant="body1" >Desarrollado por</Typography>
-                    <Link href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
+                    <a href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
                         
                             LR.DEV
                         
-                    </Link>
+                    </a>
                 </Box>
             </Box>
         </Box>
