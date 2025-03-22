@@ -20,10 +20,10 @@ const Footer = () => {
             }}
         >
             <Box sx={{ justifyItems:'center' ,justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
-                <Box>
-                    <p className={styles.tituloVirch}  >
-                        VirchVape
-                    </p>
+            <Box sx={{ justifyContent: 'end', gap: '10px', alignItems: 'center' }} >
+                    <a href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
+                        LR.DEV
+                    </a>
                 </Box>
                 <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Contacto: info@virchvape.com
