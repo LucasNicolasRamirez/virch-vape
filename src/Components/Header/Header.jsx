@@ -20,13 +20,13 @@ function Header() {
         <header>
             <div className={styles.header}>
                 <div className={styles.nav}>
-                    <Button sx={{ color: "currentColor", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/")}>
+                    <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/")}>
                         Home
                     </Button>
 
                     <Productos />
 
-                    <Button sx={{ color: "currentColor", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/contacto")}>
+                    <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/contacto")}>
                         Contacto
                     </Button>
                 </div>
@@ -41,11 +41,11 @@ function Header() {
                     <Divider orientation="vertical" flexItem />
 
                     <div className={styles.login} style={{ paddingLeft: '10px' }}>
-                        <Button sx={{ color: "currentColor", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/inventario")}>
+                        <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/inventario")}>
                             Inventario
                         </Button>
 
-                        <Button sx={{ color: "currentColor", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/perfil")}>
+                        <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/perfil")}>
                             Iniciar Sesión
                         </Button>
                     </div>

@@ -39,7 +39,6 @@ body.modo-claro {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-top: 130px;
   position:static;
   background-image: url(../src/assets/imagenes/fondo.png);
   background-size: cover;

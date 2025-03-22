@@ -59,7 +59,7 @@ function Productos() {
                     onClick={handleToggle}
                     endIcon={<ArrowDropDownIcon />}
                     sx={{
-                        color: "currentColor",
+                        color: "#cecece",
                         borderRadius: "20px",
                         fontSize: '0,75rem'
                     }}

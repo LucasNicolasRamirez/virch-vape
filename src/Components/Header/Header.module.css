@@ -18,15 +18,15 @@
 }
 
 .botonTema{
-    top: 25px;
-    right: 60px;
+    top: 2.5%;
+    right: 3%;
     z-index: 1000;
     position: fixed;
 }
 
 .botonWsp{
-    bottom: 25px;
-    right: 60px;
+    bottom: 2.5%;
+    right: 3%;
     z-index: 1000;
     position: fixed;
     scale: 1.1;
@@ -43,7 +43,7 @@
     grid-column: 2;
     font-family: 'Libre Barcode 39 Extended Text', serif;
     font-size: 3rem;
-    color: currentColor;
+    color: #cecece;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     justify-self: center;
     text-align: center;
@@ -54,4 +54,26 @@
     align-items: center;
     grid-column: 3;
     justify-self: end;
+    
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        padding: 5px;
+    }
+
+    .nav {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .login {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center;
+    }
 }

@@ -4,15 +4,6 @@ import Card from '../CardProducto/CardProducto';
 import styles from '../Cuerpo/Cuerpo.module.css';
 
 function TodosLosProd() {
-    
-
-   
-    // const formatCategoria = (cat) => {
-    //     if (!cat) return 'Todos los Productos';
-    //     return cat.split('-').map(word =>
-    //         word.charAt(0).toUpperCase() + word.slice(1)
-    //     ).join(' ');
-    // };
 
     const categoria = 'Todos Los Productos';
 
@@ -45,6 +36,9 @@ function TodosLosProd() {
                     <Card/>
                     <Card/>
                     <Card/>
+                    <Card/>
+                    <Card/>
+
                 </div>
            
         </div>

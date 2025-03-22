@@ -24,7 +24,7 @@ function IconoCarrito() {
 
     return (
         <div style={{ paddingRight: '20px'}}>
-            <IconButton onClick={handleCartClick} style={{ color: 'currentColor' }}> 
+            <IconButton onClick={handleCartClick} style={{ color: '#cecece' }}> 
                 <ShoppingCartIcon fontSize="large" />
                 <CartBadge badgeContent={3} color="info" overlap="circular" />
             </IconButton>
