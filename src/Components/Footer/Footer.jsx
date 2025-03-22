@@ -19,17 +19,17 @@ const Footer = () => {
                 boxShadow: "0 -4px 10px rgba(0, 0, 0, 0.3)",
             }}
         >
-            <Box sx={{ justifyItems:'center' ,justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
-            <Box sx={{ justifyContent: 'end', gap: '10px', alignItems: 'center' }} >
-                    <a href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
-                        LR.DEV
+            <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
+                <Box >
+                    <a className={styles.tituloVirch}  >
+                        VirchVape
                     </a>
                 </Box>
                 <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Contacto: info@virchvape.com
                 </Typography>
 
-                <Typography variant="body1" sx={{  justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
+                <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', marginBottom: '10px' }} >
                     Teléfono: +54 9 11 1234-5678
                 </Typography>
             </Box>
