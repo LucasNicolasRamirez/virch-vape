@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Container, Typography, Link, Grid, Divider } from "@mui/material";
-import styles from "./Footer.module.css";
+import { Box, Typography, Link, Divider } from "@mui/material";
+import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
@@ -41,10 +41,10 @@ const Footer = () => {
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'end', marginRight: '90px', gap: '10px', alignItems: 'center' }} >
                     <Typography variant="body1" >Desarrollado por</Typography>
-                    <Link href="https://portafolio-eosin-two.vercel.app" target="_blank" sx={{ textDecoration: 'none', color: 'currentColor' }} >
-                        <Typography variant="body1" className={styles.developerLink} >
+                    <Link href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
+                        
                             LR.DEV
-                        </Typography>
+                        
                     </Link>
                 </Box>
             </Box>
