@@ -49,7 +49,6 @@
     }
   }
 
-  /* ...existing code... */
 
 /* Media query para pantallas grandes */
 @media (max-width: 1280px) {
@@ -82,11 +81,11 @@
 }
 
 /* Media query para móviles pequeños */
-@media (max-width: 393px) {
+@media (min-width: 393px) {
   .loader1 {
     font-size: 1.8rem;
   }
-  .loader {
+  /* .loader {
     height: 0.8px;
-  }
+  } */
 }
