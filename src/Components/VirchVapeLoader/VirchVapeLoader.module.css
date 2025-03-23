@@ -55,9 +55,7 @@
   .loader1 {
     font-size: 4rem;
   }
-  .loader {
-    height: 1.5px;
-  }
+
 }
 
 /* Media query para tablets */
@@ -65,9 +63,7 @@
   .loader1 {
     font-size: 3rem;
   }
-  .loader {
-    height: 1.2px;
-  }
+
 }
 
 /* Media query para móviles */
@@ -75,9 +71,7 @@
   .loader1 {
     font-size: 2rem;
   }
-  .loader {
-    height: 1px;
-  }
+
 }
 
 /* Media query para móviles pequeños */
@@ -85,7 +79,7 @@
   .loader1 {
     font-size: 1.8rem;
   }
-  /* .loader {
-    height: 0.8px;
-  } */
+  .loader {
+    height: 2px;
+  }
 }
