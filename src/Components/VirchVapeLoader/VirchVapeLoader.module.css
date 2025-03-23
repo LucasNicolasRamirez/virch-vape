@@ -48,3 +48,45 @@
       left: unset;
     }
   }
+
+  /* ...existing code... */
+
+/* Media query para pantallas grandes */
+@media (max-width: 1280px) {
+  .loader1 {
+    font-size: 4rem;
+  }
+  .loader {
+    height: 1.5px;
+  }
+}
+
+/* Media query para tablets */
+@media (max-width: 820px) {
+  .loader1 {
+    font-size: 3rem;
+  }
+  .loader {
+    height: 1.2px;
+  }
+}
+
+/* Media query para móviles */
+@media (max-width: 480px) {
+  .loader1 {
+    font-size: 2rem;
+  }
+  .loader {
+    height: 1px;
+  }
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 393px) {
+  .loader1 {
+    font-size: 1.8rem;
+  }
+  .loader {
+    height: 0.8px;
+  }
+}
