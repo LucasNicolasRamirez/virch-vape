@@ -197,7 +197,7 @@
     margin: 0; 
   }
 }
-@media (max-width: 393px) {
+@media (min-width: 393px) {
   .card {
     max-width: 90%;
     height: 85%; 
