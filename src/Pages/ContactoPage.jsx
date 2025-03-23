@@ -17,30 +17,15 @@ function ContactoPage() {
                     direction={{ xs: 'column', md: 'row' }}
                     spacing={2}
                     alignItems="center"
-                    sx={{
-
-                        borderRadius: '15px',
-                        padding: '20px',
-                        marginTop: '20px',
-                        width: '100%'
-                    }}
+                    
                 >
 
                     <Box
-                        sx={{
-                            width: { xs: '100%', md: '50%' },
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}
+                        
                     >
                         <Box
                             component="img"
-                            sx={{
-                                width: '60%',
-                                maxHeight: 'auto',
-                                objectFit: 'cover',
-                                borderRadius: '40px'
-                            }}
+                            
                             src={ContactImage}
                             alt="Contacto VirchVape"
                         />
@@ -55,14 +40,7 @@ function ContactoPage() {
                     />
 
                     <Box
-                        sx={{
-                            width: { xs: '100%', md: '50%' },
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            gap: '30px'
-                        }}
+                        
                     >
                         <Typography variant="h5">
                             Estos son nuestros canales de contacto:

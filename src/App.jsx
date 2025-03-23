@@ -1,5 +1,4 @@
 import 'normalize.css'
-import './App.css'
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './Components/Header/Header';

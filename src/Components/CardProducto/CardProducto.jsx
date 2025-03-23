@@ -26,7 +26,7 @@ function Card() {
           )}
         </div>
         <div className={styles.content}>
-          <p className={styles.title}>UIVERSE PREMIUM FONT (REGULAR)</p>
+          <p className={styles.title}>Drag X pod kit (+ BAT 18650)</p>
           <p className={styles.price}>$120.000</p>
         </div>
         <button className={styles.cardBtn}>Agregar al carrito</button>
