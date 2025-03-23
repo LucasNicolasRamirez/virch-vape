@@ -109,14 +109,14 @@
 @media (max-width: 1280px) {
   .card {
     max-width: 90%;
-    height: 85%; /* Mantiene la altura fija */
+    height: 85%; 
     padding: 15px;
   }
   .cardImage {
-    height: 270px; /* Altura fija */
+    height: 270px; 
   }
   .card:hover .cardImage {
-    height: 230px; /* Altura fija en hover */
+    height: 230px; 
   }
   .title,.price{
     font-size: 1.2rem;
@@ -132,7 +132,7 @@
     margin: 0;
   }
   .wrapper {
-    margin: 0; /* Elimina cualquier margen */
+    margin: 0; 
   }
 }
 
@@ -140,14 +140,14 @@
 @media (max-width: 820px) {
   .card {
     max-width: 90%;
-    height: 85%; /* Mantiene la altura fija */
+    height: 85%; 
     padding: 15px;
   }
   .cardImage {
-    height: 270px; /* Altura fija */
+    height: 270px;
   }
   .card:hover .cardImage {
-    height: 230px; /* Altura fija en hover */
+    height: 230px; 
   }
   .title,.price{
     font-size: 1.2rem;
@@ -163,29 +163,28 @@
     margin: 0;
   }
   .wrapper {
-    margin: 0; /* Elimina cualquier margen */
+    margin: 0; 
   }
 }
-
-/* Media query para móviles */
+/*  Media query para móbiles */
 @media (max-width: 480px) {
   .card {
     max-width: 90%;
-    height: 85%; /* Mantiene la altura fija */
+    height: 85%; 
     padding: 15px;
   }
   .cardImage {
-    height: 270px; /* Altura fija */
+    height: 270px;
   }
   .card:hover .cardImage {
-    height: 230px; /* Altura fija en hover */
+    height: 230px;
   }
   .title,.price{
     font-size: 1.2rem;
     margin: 0px;
   }
   .card:hover .cardBtn {
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .content {
     flex-direction: column;
@@ -194,6 +193,38 @@
     margin: 0;
   }
   .wrapper {
-    margin: 0; /* Elimina cualquier margen */
+    margin: 0; 
+  }
+}
+@media (max-width: 393px) {
+  .card {
+    max-width: 90%;
+    height: 85%; 
+    padding: 15px;
+  }
+  .cardImage {
+    height: 240px; 
+  }
+  .card:hover .cardImage {
+    height: 210px; 
+  }
+  .title,.price{
+    font-size: 1.2rem;
+    margin: 0px;
+  }
+  .card:hover .cardBtn {
+    margin-top: 3px;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin: 0;
+  }
+  .wrapper {
+    margin: 0; 
+  }
+  .modalButton {
+    height: 110%;
   }
 }
