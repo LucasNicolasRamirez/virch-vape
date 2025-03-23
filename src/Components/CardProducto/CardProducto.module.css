@@ -46,7 +46,7 @@
 .price {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #0288d1;
+  color: currentColor;
 }
 
 .cardBtn {
@@ -167,25 +167,27 @@
     margin: 0; 
   }
 }
-/*  Media query para móbiles */
+/* Media query para móviles */
 @media (max-width: 480px) {
   .card {
     max-width: 90%;
-    height: 85%; 
+    height: auto; /* Cambia a auto para que se ajuste al contenido */
     padding: 15px;
+    overflow: hidden; /* Evita que el cambio de altura de .cardImage afecte el flujo */
   }
   .cardImage {
-    height: 270px;
+    height: 270px; /* Imagen estática */
+    transition: none; /* Elimina la transición */
   }
   .card:hover .cardImage {
-    height: 230px;
+    height: 270px; 
   }
-  .title,.price{
+  .title, .price {
     font-size: 1.2rem;
-    margin: 0px;
+    margin: 0;
   }
-  .card:hover .cardBtn {
-    margin-top: 10px;
+  .cardBtn {
+    margin-top: 15px; /* Reserva espacio inicial */
   }
   .content {
     flex-direction: column;
@@ -194,38 +196,57 @@
     margin: 0;
   }
   .wrapper {
-    margin: 0; 
-  }
-}
-@media (min-width: 393px) {
-  .card {
-    max-width: 90%;
-    height: 85%; 
-    padding: 15px;
-  }
-  .cardImage {
-    height: 240px; 
-  }
-  .card:hover .cardImage {
-    height: 210px; 
-  }
-  .title,.price{
-    font-size: 1.2rem;
-    margin: 0px;
-  }
-  .card:hover .cardBtn {
-    margin-top: 3px;
-  }
-  .content {
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
     margin: 0;
-  }
-  .wrapper {
-    margin: 0; 
   }
   .modalButton {
-    height: 110%;
+    visibility: hidden; /* Oculta el modal inicialmente */
+    opacity: 0; /* Hace que el modal sea invisible */
+  }
+  .card:hover .modalButton {
+    visibility: visible; /* Muestra el modal al hacer hover */
+    opacity: 1; /* Hace que el modal sea visible */
+    
+  }
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 393px) {
+  .card {
+    max-width: 90%;
+    height: auto; /* Cambia a auto para que se ajuste al contenido */
+    padding: 15px;
+    overflow: hidden; /* Evita que el cambio de altura de .cardImage afecte el flujo */
+  }
+  .cardImage {
+    height: 270px; /* Imagen estática */
+    transition: none; /* Elimina la transición */
+  }
+  .card:hover .cardImage {
+    height: 270px; 
+  }
+  .title, .price {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .cardBtn {
+    margin-top: 15px; /* Reserva espacio inicial */
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin: 0;
+  }
+  .wrapper {
+    margin: 0;
+  }
+  .modalButton {
+    visibility: hidden; /* Oculta el modal inicialmente */
+    opacity: 0; /* Hace que el modal sea invisible */
+  }
+  .card:hover .modalButton {
+    visibility: visible; /* Muestra el modal al hacer hover */
+    opacity: 1; /* Hace que el modal sea visible */
+    
   }
 }
