@@ -84,7 +84,7 @@ function GaleriaProductos() {
                 className={styles.swiper}
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
-                slidesPerView={3}
+                slidesPerView={4}
                 navigation
                 pagination={{
                     clickable: true,
