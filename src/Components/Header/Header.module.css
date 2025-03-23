@@ -143,8 +143,8 @@
     }
 
     .title {
-        font-size: 1rem;
-    }
+        display: none;
+      }
 
     .login {
         align-items: center;
@@ -167,6 +167,9 @@
     .botonTema {
         top: 2%;
         right: 2%;
+        position:absolute;
+        /* z-index: -1; */
+        scale: 1;
     }
 
 
@@ -176,6 +179,7 @@
 @media (max-width: 393px) {
     .header {
         width: 65%;
+        position: fixed; 
 
     }
 
@@ -184,7 +188,7 @@
     }
 
     .title {
-        font-size: 1rem;
+      display: none;
     }
 
     .login {
@@ -207,7 +211,10 @@
 
     .botonTema {
         top: 2%;
-        right: 2%;
+        right: .5%;
+        position:absolute;
+        /* z-index: -1; */
+        scale: .7;
     }
 
 }
