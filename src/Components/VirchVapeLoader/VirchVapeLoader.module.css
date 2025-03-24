@@ -11,6 +11,12 @@
     justify-self: center;
     text-align: center;
     background-color: rgba(68, 68, 68, 0.8);
+    background-image: url(../../assets/imagenes/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position:static;
     
 }
 
