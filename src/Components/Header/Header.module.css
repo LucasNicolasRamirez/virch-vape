@@ -173,9 +173,9 @@
     }
 }
 
-@media (max-width: 393px) {
+@media (max-width: 389px) {
     .botonTema {
-        top: 10%;
+        top: 12%;
         right: 2%;
         position: absolute;
     }
