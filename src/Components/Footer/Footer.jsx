@@ -12,7 +12,7 @@ const Footer = () => {
                 color: "currentColor",
                 py: 4,
                 margin: "0 auto",
-                mt: "auto",
+                mt: 0,
                 backdropFilter: "blur(2px)",
                 borderTopRightRadius: "20px",
                 borderTopLeftRadius: "20px",

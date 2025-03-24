@@ -12,15 +12,17 @@
     --color-texto-claro: #333333;
     --color-fondo-tarjeta-claro: #ffffff;
     --color-borde-claro: #e0e0e0;
+
   }
-  
-  
+
   body {
     transition: background-color 0.3s, color 0.3s;
-    /* width: 100%; */
-    /* height: 100vh; */
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
     
   }
   
@@ -34,16 +36,7 @@
     color: var(--color-texto-claro);
   }
   
-  .fondo{
-    width: 100%;
-    min-height: 100%;
-    background-image: url(../src/assets/imagenes/fondo.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    position:static;
-  }
+
   
   .modo-oscuro .fondo {
     background-color: var(--color-fondo-oscuro);

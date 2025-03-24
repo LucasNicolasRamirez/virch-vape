@@ -14,61 +14,65 @@ import Carrito from './Pages/Carrito';
 import Loader from './Components/Loader/Loader';
 import VirchVapeLoader from './Components/VirchVapeLoader/VirchVapeLoader';
 import Inventario from './Pages/InventarioPage';
+import styles from '../src/Components/Cuerpo/Cuerpo.module.css';
+import './App.css';
 
 function AppContent() {
-  const [loading, setLoading] = useState(false);
-  const { pathname } = useLocation();
+    const [loading, setLoading] = useState(false);
+    const { pathname } = useLocation();
 
-  useEffect(() => {
-      setLoading(true);
-      const timer = setTimeout(() => {
-          setLoading(false);
-      }, 1000);
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1000);
 
-      return () => clearTimeout(timer);
-  }, [pathname]);
+        return () => clearTimeout(timer);
+    }, [pathname]);
 
-  return (
-      <>
-          <Header />
-          <div className='fondo'>
-              {loading ? <Loader /> : (
-                  <Routes>
-                      <Route path='/' element={<Home />} />
-                      <Route path='/productos' element={<Productos />} />
-                      <Route path='/productos/:categoria' element={<Productos />} />
-                      <Route path='/contacto' element={<ContactoPage />} />
-                      <Route path='/iniciar-sesion' element={<IniciarSesion />} />
-                      <Route path='/perfil' element={<PerfilUser />} />
-                      <Route path='/producto' element={<Producto />} />
-                      <Route path='/carrito' element={<Carrito />} />
-                      <Route path='/inventario' element={<Inventario />} />
-                  </Routes>
-              )}
-          <Footer />
-          </div>
-      </>
-  );
+    return (
+        <div className={styles.cuerpo}>
+            <Header />
+            <div className='fondo'>
+                <div className={styles.contenido}>
+                    {loading ? <Loader /> : (
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/productos' element={<Productos />} />
+                            <Route path='/productos/:categoria' element={<Productos />} />
+                            <Route path='/contacto' element={<ContactoPage />} />
+                            <Route path='/iniciar-sesion' element={<IniciarSesion />} />
+                            <Route path='/perfil' element={<PerfilUser />} />
+                            <Route path='/producto' element={<Producto />} />
+                            <Route path='/carrito' element={<Carrito />} />
+                            <Route path='/inventario' element={<Inventario />} />
+                        </Routes>
+                    )}
+                </div>
+                    <Footer />
+            </div>
+        </div>
+    );
 }
 
 function App() {
-  const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-      const timer = setTimeout(() => {
-          setLoading(false);
-      }, 2500);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2500);
 
-      return () => clearTimeout(timer);
-  }, []);
+        return () => clearTimeout(timer);
+    }, []);
 
-  return (
-      <ProveedorTema>
-          <Router>
-              {loading ? <VirchVapeLoader /> : <AppContent />}
-          </Router>
-      </ProveedorTema>
-  );
+    return (
+        <ProveedorTema>
+            <Router>
+                {loading ? <VirchVapeLoader /> : <AppContent />}
+            </Router>
+        </ProveedorTema>
+    );
 }
 
 export default App;

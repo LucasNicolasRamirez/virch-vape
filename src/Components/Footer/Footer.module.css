@@ -1,13 +1,3 @@
-.footerContainer {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-
-
 .tituloVirchFooter {
     color: currentColor;
     text-decoration: none;
