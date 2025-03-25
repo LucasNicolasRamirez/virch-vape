@@ -140,7 +140,7 @@ function FiltroInventario() {
                         color: 'currentColor',
                     },
                     '& .MuiAutocomplete-popupIndicator': {
-                        display: 'none',
+                        color: 'currentColor',
                     },
                     '& .MuiAutocomplete-clearIndicator': {
                         color: 'currentColor',
