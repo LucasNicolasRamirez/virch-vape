@@ -105,6 +105,13 @@
         gap: 60px;
         box-sizing: border-box;
     }
+    .carrito {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 @media (max-width: 480px) {
