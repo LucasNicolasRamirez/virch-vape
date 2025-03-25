@@ -1,6 +1,7 @@
 import 'normalize.css'
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { ProveedorTema } from '../src/Components/ContextoTema/ContextoTema';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/HomePage';
@@ -8,11 +9,10 @@ import Productos from './Pages/ProductosPage';
 import ContactoPage from './Pages/ContactoPage';
 import IniciarSesion from './Pages/IniciarSesion';
 import PerfilUser from './Pages/PerfilUser';
-import Producto from './Pages/Producto';
-import { ProveedorTema } from '../src/Components/ContextoTema/ContextoTema';
 import Carrito from './Pages/Carrito';
 import Loader from './Components/Loader/Loader';
 import VirchVapeLoader from './Components/VirchVapeLoader/VirchVapeLoader';
+import Producto from './Pages/Producto';
 import Inventario from './Pages/InventarioPage';
 import styles from '../src/Components/Cuerpo/Cuerpo.module.css';
 import './App.css';

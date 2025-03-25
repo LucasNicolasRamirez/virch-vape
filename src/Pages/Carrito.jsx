@@ -7,9 +7,9 @@ function Carrito() {
     return (
         <div className={styles.cuerpo}>
             <div className={styles.contenido} >
-                <div >
-                    <ItemsCarrito />
-                </div>
+
+                <ItemsCarrito />
+
             </div>
         </div>
     );
