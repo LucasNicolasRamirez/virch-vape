@@ -75,7 +75,6 @@ function MenuPequeño() {
     return (
         <div className={styles.loginHamb}>
             <Button
-            className={styles.loginHamb}
                 ref={anchorRef}
                 id="composition-button"
                 aria-controls={open ? 'composition-menu' : undefined}
