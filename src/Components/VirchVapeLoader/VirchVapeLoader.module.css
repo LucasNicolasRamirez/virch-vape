@@ -75,7 +75,7 @@
 }
 
 /* Media query para móviles pequeños */
-@media (max-width: 410px) {
+@media (max-width: 393px) {
   .loader1 {
     font-size: 3rem;
   }
