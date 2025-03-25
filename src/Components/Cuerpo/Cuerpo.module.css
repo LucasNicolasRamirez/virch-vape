@@ -7,7 +7,6 @@
     box-sizing: border-box;
     justify-content: space-between; 
     align-items: center; 
-    color: currentColor;
     
 }
 
@@ -101,6 +100,12 @@
         
     }
 
+    .grid2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        box-sizing: border-box;
+    }
+
 }
 @media (max-width: 480px) {
   
@@ -108,11 +113,17 @@
     .grid2 {
         padding-top: 20px;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
+        min-height: 340px;
         gap: 20px;
         box-sizing: border-box;
         justify-items: center;
+    }
+    .grid2 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 60px;
+        box-sizing: border-box;
     }
 
     
