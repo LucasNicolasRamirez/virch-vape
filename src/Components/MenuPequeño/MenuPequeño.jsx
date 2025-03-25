@@ -109,7 +109,7 @@ function MenuPequeño() {
                                 borderRadius: '20px',
                                 boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
                                 padding: '10px',
-                                maxHeight: '80vh', 
+                                maxHeight: '85vh', 
                                 overflowY: 'auto',
                             }}
                         >

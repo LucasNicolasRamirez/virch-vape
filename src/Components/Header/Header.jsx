@@ -6,7 +6,7 @@ import IconoCarrito from "../BotonCarrito/Carrito";
 import Productos from "../Productos/Productos";
 import CambioTema from "../BotonTema/BotonTema";
 import BotonWsp from "../BotonWsp/BotonWsp";
-import MenuPequeño from '../MenuDerecho/MenuPequeño';
+import MenuPequeño from '../MenuPequeño/MenuPequeño';
 
 function Header() {
     const navigate = useNavigate();
