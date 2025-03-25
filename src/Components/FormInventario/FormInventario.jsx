@@ -53,6 +53,15 @@ function FormInventario() {
                             width: '90%',
                             maxWidth: 800
                         },
+                        '@media (max-width: 480px)': {
+                            position: 'absolute',
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            margin: 0,
+                            width: '85%',
+                            maxWidth: 800
+                        },
                         padding: 1,
                         backgroundColor: "#1c1c1c",
                         borderRadius: 4,

@@ -6,8 +6,8 @@ function PerfilUser() {
     return (
         <div className={styles.cuerpo}>
             <div className={styles.contenido}>
-                <Typography variant='h2' sx={{ textAlign: 'center' }}>PERFIL DE USUARIO</Typography>
-                <Typography variant='h2' sx={{ textAlign: 'center' }}>PROXIMAMENTE</Typography>
+                <Typography variant='h3' sx={{ textAlign: 'center' }}>PERFIL DE USUARIO</Typography>
+                <Typography variant='h3' sx={{ textAlign: 'center' }}>PROXIMAMENTE</Typography>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Button } from '@mui/material';
-
+import styles from '../FiltroCategorias/FiltroCategorias.module.css';
 
 const Marcas = [
     { label: 'MVH 60ml 3mg' },
@@ -37,16 +37,7 @@ const Categorias = [
 
 function FiltroInventario() {
     return (
-        <div style={{
-            display: 'flex',
-            gap: '10px',
-            backgroundColor: 'rgba(54, 54, 54, 0.5)',
-            borderRadius: '40px',
-            padding: '10px',
-            width: '850px',
-            justifyContent: 'space-between',
-            color: 'currentColor'
-        }}>
+        <div className={styles.container}>
             <TextField
                 id="outlined-basic"
                 label="Buscar producto"
@@ -109,7 +100,7 @@ function FiltroInventario() {
                         color: 'currentColor',
                     },
                     '& .MuiAutocomplete-popupIndicator': {
-                        color: 'currentColor',
+                        display: 'none',
                     },
                     '& .MuiAutocomplete-clearIndicator': {
                         color: 'currentColor',
@@ -149,7 +140,7 @@ function FiltroInventario() {
                         color: 'currentColor',
                     },
                     '& .MuiAutocomplete-popupIndicator': {
-                        color: 'currentColor',
+                        display: 'none',
                     },
                     '& .MuiAutocomplete-clearIndicator': {
                         color: 'currentColor',
@@ -157,7 +148,7 @@ function FiltroInventario() {
                 }}
                 renderInput={(params) => <TextField {...params} label="Marca" />}
             />
-            <Button variant='contained' sx={{ borderRadius: '40px', color: 'currentColor', backgroundColor: '#7e7d7d' }}>Filtrar</Button>
+            <Button  variant='contained' sx={{ borderRadius: '40px', color: 'currentColor', backgroundColor: '#7e7d7d' }}>Filtrar</Button>
         </div>
     );
 }

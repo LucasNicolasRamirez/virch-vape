@@ -4,7 +4,8 @@ import { Typography } from '@mui/material';
 
 const FormularioUser = () => {
   return (
-   <>      <Typography variant="h3"  gutterBottom sx={{ textAlign: 'center' }}>Proximamente</Typography>
+    <div>
+      <Typography variant="h3" gutterBottom sx={{ textAlign: 'center' }}>Proximamente</Typography>
       <form className={styles.form_main} action='true'>
         <p className={styles.heading}>Iniciar Sesión</p>
         <div className={styles.inputContainer}>
@@ -25,9 +26,9 @@ const FormularioUser = () => {
           <a href="#" rel="noopener noreferrer">Registrarse</a>
         </div>
       </form>
-      </>
+    </div>
 
-    
+
   );
 }
 

@@ -171,23 +171,21 @@
 @media (max-width: 480px) {
   .card {
     max-width: 90%;
-    height: auto; /* Cambia a auto para que se ajuste al contenido */
+    height: 85%;
     padding: 15px;
-    overflow: hidden; /* Evita que el cambio de altura de .cardImage afecte el flujo */
   }
   .cardImage {
-    height: 270px; /* Imagen estática */
-    transition: none; /* Elimina la transición */
+    height: 260px; /* Imagen estática */
   }
   .card:hover .cardImage {
-    height: 270px; 
+    height: 220px; 
   }
   .title, .price {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0;
   }
-  .cardBtn {
-    margin-top: 15px; /* Reserva espacio inicial */
+  .card:hover .cardBtn {
+    margin-top: 15px;
   }
   .content {
     flex-direction: column;
@@ -198,15 +196,7 @@
   .wrapper {
     margin: 0;
   }
-  .modalButton {
-    visibility: hidden; /* Oculta el modal inicialmente */
-    opacity: 0; /* Hace que el modal sea invisible */
-  }
-  .card:hover .modalButton {
-    visibility: visible; /* Muestra el modal al hacer hover */
-    opacity: 1; /* Hace que el modal sea visible */
-    
-  }
+ 
 }
 
 /* Media query para móviles pequeños */

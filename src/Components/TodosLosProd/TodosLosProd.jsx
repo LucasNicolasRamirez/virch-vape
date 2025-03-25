@@ -17,7 +17,7 @@ function TodosLosProd() {
 
         <div className={styles.cuerpo}>
             
-                <Typography variant="h5" >
+                <Typography variant="h5" sx={{ width:'100%' }}>
                     {categoria}
                 </Typography>
 

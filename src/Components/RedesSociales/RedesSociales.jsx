@@ -92,34 +92,6 @@ const RedesSociales = () => {
                         </a>
                     </div>
                 </div>
-                {/* GMAIL */}
-                <div className={styles.tooltipContainer}>
-                    <div className={styles.tooltip}>
-                        <div className={styles.profile}>
-                            <div className={styles.user}>
-                                <div className={styles.img}><img src={logo} className={styles.imagenLogo} alt="Logo VirchVape"/></div>
-                                <div className={styles.details}>
-                                    <div className={styles.name}>VirchVape</div>
-                                    <div className={styles.username}>info@virchvape.com</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.text}>
-                        <a className={styles.icon} href="#">
-                            <div className={styles.layer}>
-                                <span />
-                                <span />
-                                <span />
-                                <span />
-                                <span className={styles.gmail}>
-                                    <FaGoogle size={40} />
-                                </span>
-                            </div>
-                            <div className={styles.text}>Gmail</div>
-                        </a>
-                    </div>
-                </div>
             </div>
       
     );

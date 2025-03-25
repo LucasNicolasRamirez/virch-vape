@@ -7,50 +7,72 @@ import RedesSociales from '../Components/RedesSociales/RedesSociales';
 
 function ContactoPage() {
     return (
-        <div className={styles.cuerpo}>
-            <div className={styles.contenido}>
-                <Typography variant="h4" >
-                    Contactanos
-                </Typography>
 
-                <Stack
-                    direction={{ xs: 'column', md: 'row' }}
-                    spacing={2}
-                    alignItems="center"
-                    
+        <div className={styles.contenido}>
+            <Typography variant="h4" >
+                Contactanos
+            </Typography>
+
+            <Stack
+                direction={{ xs: 'column', md: 'row' }}
+                spacing={2}
+                sx={{
+
+                    alignItems: "center",
+                    borderRadius: '15px',
+                    marginTop: '20px',
+                    width: '100%'
+                }}
+            >
+
+                <Box
+                    sx={{
+                        width: { xs: '100%', md: '50%' },
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}
                 >
-
                     <Box
-                        
-                    >
-                        <Box
-                            component="img"
-                            
-                            src={ContactImage}
-                            alt="Contacto VirchVape"
-                        />
-                    </Box>
-
-                    <Divider
-                        orientation="vertical"
-                        flexItem
+                        component="img"
                         sx={{
-                            color: 'gray'
+                            width: '60%',
+                            maxHeight: 'auto',
+                            objectFit: 'cover',
+                            borderRadius: '40px'
                         }}
+                        src={ContactImage}
+                        alt="Contacto VirchVape"
                     />
+                </Box>
 
-                    <Box
-                        
-                    >
-                        <Typography variant="h5">
-                            Estos son nuestros canales de contacto:
-                        </Typography>
-                        <RedesSociales />
-                    </Box>
-                </Stack>
+                <Divider
+                    orientation="vertical"
+                    flexItem
+                    sx={{
+                        color: 'gray'
+                    }}
+                />
 
-            </div>
+                <Box
+                    sx={{
+                        width: { xs: '100%', md: '50%' },
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        gap: '30px'
+                    }}
+
+                >
+                    <Typography variant="h5">
+                        Estos son nuestros canales de contacto:
+                    </Typography>
+                    <RedesSociales />
+                </Box>
+            </Stack>
+
         </div>
+
     );
 }
 

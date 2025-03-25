@@ -114,4 +114,11 @@
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 20px;
-};
+}
+
+/* Media query para móviles */
+@media (max-width: 480px) {
+  .form_main {
+    width: 300px;
+  }
+}

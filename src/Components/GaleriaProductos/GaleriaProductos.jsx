@@ -8,7 +8,6 @@ import prod1 from '../../assets/imagenes/prod1.jpg';
 import prod2 from '../../assets/imagenes/prod2.jpg';
 import prod3 from '../../assets/imagenes/prod3.png';
 import styles from './GaleriaProductos.module.css';
-import { Margin, Padding } from '@mui/icons-material';
 
 const featuredProducts = [
     { id: 1, name: 'VaporMax Pro', image: prod1, price: '$79.99' },
@@ -31,19 +30,20 @@ function GaleriaProductos() {
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
-                slidesPerView={1}
+                slidesPerView={2}
                 navigation
                 pagination={{
                     clickable: true,
                     dynamicBullets: true,
                     dynamicMainBullets: 3
                 }}
+                
                 autoplay={{ delay: 5000 }}
                 breakpoints={{
                     1920: { slidesPerView: 4 },
                     1280: { slidesPerView: 3 },
                     820: { slidesPerView: 2 },
-                    480: { slidesPerView: 1 },
+                    480: { slidesPerView: 2 },
                 }}
             >
                 {featuredProducts.map((product) => (
