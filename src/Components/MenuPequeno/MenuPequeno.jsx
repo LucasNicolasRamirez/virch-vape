@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, ClickAwayListener, Divider, Grow, MenuItem, MenuList, Paper, Popper, Collapse } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import styles from './MenuPequeño.module.css';
+import styles from './MenuPequeno.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function MenuPequeno() {

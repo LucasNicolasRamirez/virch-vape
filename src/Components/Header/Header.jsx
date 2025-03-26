@@ -6,7 +6,7 @@ import IconoCarrito from "../BotonCarrito/Carrito";
 import Productos from "../Productos/Productos";
 import CambioTema from "../BotonTema/BotonTema";
 import BotonWsp from "../BotonWsp/BotonWsp";
-import MenuPequeño from '../MenuPequeño/MenuPequeño';
+import MenuPequeno from '../MenuPequeno/MenuPequeno';
 
 function Header() {
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ function Header() {
             <div className={styles.header}>
                 <div className={styles.nav}>
 
-                    <MenuPequeño />
+                    <MenuPequeno />
 
                     <div className={styles.nav1}>
                         <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/")}>
