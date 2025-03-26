@@ -1,5 +1,6 @@
 .loginHamb{
     display: none;
+    visibility: hidden;
 }
 
 /* Media query para pantallas pequeñas */
@@ -9,6 +10,7 @@
         display: flex;
         width: 100%;
         align-items: center;
+        visibility: visible;
     }
 
 }
