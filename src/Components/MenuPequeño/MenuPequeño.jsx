@@ -5,7 +5,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './MenuPequeño.module.css';
 import { useNavigate } from 'react-router-dom';
 
-function MenuPequeño() {
+function MenuPequeno() {
     const [open, setOpen] = React.useState(false);
     const [subMenuOpen, setSubMenuOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
@@ -190,4 +190,4 @@ function MenuPequeño() {
     );
 }
 
-export default MenuPequeño;
+export default MenuPequeno;
