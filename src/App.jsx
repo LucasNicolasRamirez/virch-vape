@@ -38,6 +38,7 @@ function AppContent() {
                     {loading ? <Loader /> : (
                         <Routes>
                             <Route path='/' element={<Home />} />
+                            <Route path='/productos' element={<ProductosPage />} />
                             <Route path='/productos/:id' element={<ProductosPage />} />
                             <Route path='/contacto' element={<ContactoPage />} />
                             <Route path='/iniciar-sesion' element={<IniciarSesion />} />
