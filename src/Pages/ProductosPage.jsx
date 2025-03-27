@@ -68,7 +68,7 @@ export const ProductosPage = () => {
 
                 <div className={styles.grid}>
                     {filteredProductos.map(producto => (
-                        <Card id={producto.id} nombre={producto.nombre} precio={producto.precio} stock={producto.stock} />
+                        <Card  key={producto.id} id={producto.id} nombre={producto.nombre} precio={producto.precio} stock={producto.stock} />
                     ))}
                 </div>
             </div>
