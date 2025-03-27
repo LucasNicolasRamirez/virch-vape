@@ -3,7 +3,7 @@
 }
 
 /* Media query para pantallas pequeñas */
-@media (max-width: 980px) {
+@media (max-width: 1280px) {
 
     .loginHamb{
         display: flex;

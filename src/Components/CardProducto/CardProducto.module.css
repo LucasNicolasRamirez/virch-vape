@@ -91,6 +91,13 @@
   font-weight: 500;
 }
 
+.bajo-stock {
+  background-color: yellow; /* Color para 'Bajo stock' */
+}
+
+.sin-stock {
+  background-color: grey; /* Color para 'Sin stock' */
+}
 .modalButton {
   width: 100%;
   height: 100%;
