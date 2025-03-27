@@ -2,6 +2,6 @@
   "rewrites": [
       { "source": "/producto/(.*)", "destination": "/producto/[id]" },
       { "source": "/productos/(.*)", "destination": "/productos/[id]" },
-      { "source": "/(.*)", "destination": "/" }
+      { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
