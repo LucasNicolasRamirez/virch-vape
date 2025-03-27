@@ -43,7 +43,7 @@ function AppContent() {
                             <Route path='/contacto' element={<ContactoPage />} />
                             <Route path='/iniciar-sesion' element={<IniciarSesion />} />
                             <Route path='/perfil' element={<PerfilUser />} />
-                            <Route path='/producto' element={<Producto />} />
+                            <Route path='/producto/:id' element={<Producto />} />
                             <Route path='/carrito' element={<Carrito />} />
                             <Route path='/inventario' element={<Inventario />} />
                         </Routes>
