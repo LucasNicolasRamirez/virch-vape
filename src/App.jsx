@@ -5,7 +5,6 @@ import { ProveedorTema } from '../src/Components/ContextoTema/ContextoTema';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/HomePage';
-import Productos from './Pages/ProductosPage';
 import ContactoPage from './Pages/ContactoPage';
 import IniciarSesion from './Pages/IniciarSesion';
 import PerfilUser from './Pages/PerfilUser';
@@ -16,6 +15,7 @@ import Producto from './Pages/Producto';
 import Inventario from './Pages/InventarioPage';
 import styles from '../src/Components/Cuerpo/Cuerpo.module.css';
 import './App.css';
+import { ProductosPage } from './Pages/ProductosPage';
 
 function AppContent() {
     const [loading, setLoading] = useState(false);
@@ -38,8 +38,7 @@ function AppContent() {
                     {loading ? <Loader /> : (
                         <Routes>
                             <Route path='/' element={<Home />} />
-                            <Route path='/productos' element={<Productos />} />
-                            <Route path='/productos/:id' element={<Productos />} />
+                            <Route path='/productos/:id' element={<ProductosPage />} />
                             <Route path='/contacto' element={<ContactoPage />} />
                             <Route path='/iniciar-sesion' element={<IniciarSesion />} />
                             <Route path='/perfil' element={<PerfilUser />} />

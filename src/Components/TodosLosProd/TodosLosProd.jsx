@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Typography, Divider } from '@mui/material';
+import { Typography} from '@mui/material';
 import Card from '../CardProducto/CardProducto';
 import styles from '../Cuerpo/Cuerpo.module.css';
+import {ProductosPage, initialProductos } from '../../Pages/ProductosPage'; 
 
 function TodosLosProd() {
 
@@ -14,33 +15,25 @@ function TodosLosProd() {
     }, []);
 
     return (
-
         <div className={styles.cuerpo}>
-            
-                <Typography variant="h5" sx={{ width:'100%' }}>
-                    {categoria}
-                </Typography>
+            <Typography variant="h5" sx={{ width: '100%' }}>
+                {categoria}
+            </Typography>
 
 
-                <div className={styles.grid}>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+            <div className={styles.grid}>
+            {initialProductos.map(producto => (
+                    <Card 
+                        key={producto.id} 
+                        id={producto.id} 
+                        nombre={producto.nombre} 
+                        precio={producto.precio} 
+                        stock={producto.stock} 
+                    />
+                ))}
 
-                </div>
-           
+            </div>
+
         </div>
 
     );

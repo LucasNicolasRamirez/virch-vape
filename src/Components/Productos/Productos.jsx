@@ -6,7 +6,6 @@ import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +19,7 @@ function Productos() {
     };
 
     const handleClose = (event) => {
-        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+        if (event && anchorRef.current && anchorRef.current.contains(event.target)) {
             return;
         }
         setOpen(false);
@@ -35,14 +34,15 @@ function Productos() {
         }
     };
 
-    const handleCategorySelect = (categoria) => {
-        setOpen(false);
+const handleCategorySelect = (categoria) => {
+    setOpen(false);
+    if (categoria === 'Todos los productos') {
+        navigate(`/productos/todos-los-productos`); // Redirige a todos los productos
+    } else {
         navigate(`/productos/${categoria.toLowerCase().replace(/\s+/g, '-')}`);
-        if (typeof handleClose === 'function') {
-            handleClose(); 
-        }
-        window.scrollTo(0, 0);
-    };
+    }
+    window.scrollTo(0, 0);
+};
 
     useEffect(() => {
         window.scrollTo(0, 0);
