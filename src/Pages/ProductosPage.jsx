@@ -38,7 +38,7 @@ function ProductosPage() {
         { id: 13, nombre: 'Producto 13', precio: 120000, descripcion: 'Descripción del producto 13', imagen: prod3, stock: 10 },
     ];
     const [productos, setProductos] = useState(initialProductos);
-
+    console.log(productos)
 
 
 
