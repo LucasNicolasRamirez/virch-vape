@@ -23,7 +23,7 @@ function Header() {
             <div className={styles.header}>
                 <div className={styles.nav}>
 
-                    <MenuPequeno  className={styles.loginHamb}/>
+                    <MenuPequeno  className={styles.loginHamb} />
 
                     <div className={styles.nav1}>
                         <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/")}>
