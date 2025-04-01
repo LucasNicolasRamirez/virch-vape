@@ -58,6 +58,10 @@
     justify-self: end;
 
 }
+.loginHamb{
+    display: none;
+}
+
 
 
 /* Media query para pantallas pequeñas */

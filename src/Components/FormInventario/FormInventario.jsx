@@ -78,9 +78,10 @@ function FormInventario() {
                     <form>
                         <Box sx={{ display: "flex", flexDirection: "column", gap: 2, padding: 2 }}>
                             <TextField
+                                id="marca"
+                                name='marca'
                                 fullWidth
                                 label="Marca del producto"
-                                name="marca"
                                 sx={{
                                     "& .MuiInputBase-input": { color: "#fff" },
                                     "& .MuiFormLabel-root": { color: "#fff" },
@@ -91,9 +92,10 @@ function FormInventario() {
                                 }}
                             />
                             <TextField
+                                id="nombre"
+                                name='nombre'
                                 fullWidth
                                 label="Nombre del producto"
-                                name="name"
                                 sx={{
                                     "& .MuiInputBase-input": { color: "#fff" },
                                     "& .MuiFormLabel-root": { color: "#fff" },
@@ -104,10 +106,11 @@ function FormInventario() {
                                 }}
                             />
                             <TextField
+                                id="categoria"
+                                name='categoria'
                                 select
                                 fullWidth
                                 label="Categoría"
-                                name="categoria"
                                 value={categoriaSeleccionada}
                                 onChange={(e) => {
                                     setCategoriaSeleccionada(e.target.value);
@@ -140,9 +143,10 @@ function FormInventario() {
                                 <MenuItem value="otros">Otros</MenuItem>
                             </TextField>
                             <TextField
+                                id="precio"
+                                name='precio'
                                 fullWidth
                                 label="Precio del producto"
-                                name="precio"
                                 type="number"
                                 sx={{
                                     "& .MuiInputBase-input": { color: "#fff" },
@@ -154,9 +158,10 @@ function FormInventario() {
                                 }}
                             />
                             <TextField
+                                id="cantidad"
+                                name='cantidad'
                                 fullWidth
                                 label="Cantidad"
-                                name="name"
                                 type="number"
                                 sx={{
                                     "& .MuiInputBase-input": { color: "#fff" },
@@ -170,10 +175,10 @@ function FormInventario() {
 
 
                             <TextField
+                                id="imagen"
+                                name='imagen'
                                 fullWidth
                                 label="Imagen del producto"
-                                id="imagen"
-                                name="imagen"
                                 type="file"
                                 
                                 sx={{
@@ -188,9 +193,10 @@ function FormInventario() {
                             />
 
                             <TextField
+                                id="descripcion"
+                                name='descripcion'
                                 fullWidth
                                 label="Descripción del producto"
-                                name="descripcion"
                                 multiline
                                 rows={8}
                                 sx={{

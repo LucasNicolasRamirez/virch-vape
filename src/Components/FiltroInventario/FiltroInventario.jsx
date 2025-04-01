@@ -39,7 +39,8 @@ function FiltroInventario() {
     return (
         <div className={styles.container}>
             <TextField
-                id="outlined-basic"
+                id="buscarProducto"
+                name='buscarProducto'
                 label="Buscar producto"
                 variant="outlined"
                 size='small'
