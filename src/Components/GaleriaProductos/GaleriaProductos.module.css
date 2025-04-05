@@ -6,9 +6,12 @@
     margin-bottom: 2rem;
 }
 
+/* Swiper general */
 .swiper {
     width: 100%;
     padding: 20px;
+
+    /* Swiper variables */
     --swiper-pagination-bottom: 0px;
     --swiper-pagination-color: #00ffff;
     --swiper-pagination-bullet-inactive-color: gray;
@@ -20,16 +23,15 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
 
 }
 
+/* Tarjeta del producto */
 .card {
     flex: 0 0 auto; 
     width: 345px; 
     height: 430px;
-    transition: all 0.3s ease-in-out;
 }
 
 .card:hover {

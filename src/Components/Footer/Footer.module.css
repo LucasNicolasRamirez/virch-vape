@@ -3,16 +3,35 @@
     text-decoration: none;
     font-family: 'Libre Barcode 39 Extended Text', serif;
     font-size: 2.3rem;
-}
-
-.developerLink {
+    text-align: center;
+  }
+  
+  .developerLink {
     color: currentColor;
     text-decoration: none;
     font-family: 'Libre Barcode 39 Extended Text', serif;
     font-size: 2.3rem;
-}
-
-.developerLink:hover {
+    text-align: center;
+    display: block;
+    margin-top: 8px;
+  }
+  
+  .developerLink:hover {
     color: #0288d1;
     transition: all 0.3s;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .tituloVirchFooter,
+    .developerLink {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tituloVirchFooter,
+    .developerLink {
+      font-size: 1.6rem;
+    }
+  }
+  

@@ -1,22 +1,33 @@
-
 .scrollable {
-    max-height: 95vh; 
-    overflow-y: auto; 
-
-    &::-webkit-scrollbar {
-        width: 8px; 
+    max-height: 95vh;
+    overflow-y: auto;
+    scrollbar-color: #555 transparent;
+    scrollbar-width: thin;
+  }
+  
+  /* Scrollbar para navegadores basados en WebKit */
+  .scrollable::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  .scrollable::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Ajustes extra para móviles (opcional) */
+  @media (max-width: 480px) {
+    .scrollable {
+      max-height: 85vh;
+      padding-right: 4px; /* espacio para que no tape contenido */
     }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: #555; 
-        border-radius: 5px; 
+  
+    .scrollable::-webkit-scrollbar {
+      width: 6px;
     }
-
-    &::-webkit-scrollbar-track {
-        background: transparent; 
-    }
-
-    scrollbar-color: #555 transparent; 
-    scrollbar-width: thin; 
-}
-
+  }
+  

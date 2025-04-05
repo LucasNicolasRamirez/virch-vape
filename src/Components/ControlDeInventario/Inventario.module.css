@@ -27,7 +27,6 @@
 }
 
 .cardContainer .cardContent {
-  height: 100%;
   background-color: #161a20;
   border-radius: 30px;
   color: #838383;
@@ -36,6 +35,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex-grow: 1;
 }
 
 .cardContainer .cardContent .title {
@@ -96,4 +96,57 @@
 
 .cardContainer .cardContent .cardBtn:active {
   transform: scale(1);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cardContainer .titleCard p {
+    font-size: 13px;
+  }
+
+  .cardContainer .cardContent {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .imageContainer {
+    height: 12rem;
+  }
+
+  .imageContainer .image {
+    width: 4rem;
+  }
+
+  .cardContainer .cardContent .cardBtn {
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardContainer {
+    border-radius: 24px;
+  }
+
+  .cardContainer .titleCard {
+    padding: 12px 14px;
+  }
+
+  .cardContainer .titleCard p {
+    font-size: 12px;
+  }
+
+  .cardContainer .cardContent {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .imageContainer .image {
+    width: 3.5rem;
+  }
+
+  .cardContainer .cardContent .cardBtn {
+    font-size: 10px;
+    padding: 5px;
+  }
 }

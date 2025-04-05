@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Typography} from '@mui/material';
 import Card from '../CardProducto/CardProducto';
 import styles from '../Cuerpo/Cuerpo.module.css';
-import {ProductosPage, initialProductos } from '../../Pages/ProductosPage'; 
+import { productosData } from '../../Data/ProductosMock';
 
 function TodosLosProd() {
 
@@ -22,7 +22,7 @@ function TodosLosProd() {
 
 
             <div className={styles.grid}>
-            {initialProductos.map(producto => (
+            {productosData.map(producto => (
                     <Card 
                         key={producto.id} 
                         id={producto.id} 

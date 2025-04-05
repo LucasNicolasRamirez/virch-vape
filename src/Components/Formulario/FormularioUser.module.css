@@ -37,7 +37,7 @@
   border: none;
   border-bottom: 2px solid rgb(173, 173, 173);
   border-radius: 30px;
-  margin: 10px0;
+  margin: 10px 0;
   color: black;
   font-size: 1em;
   font-weight: 500;
@@ -83,12 +83,12 @@
   border-bottom-right-radius: 100px;
   border-top-left-radius: 100px;
   filter: blur(10px);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .button:hover::after {
   transform: translateX(600px);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .signupContainer {
@@ -103,7 +103,7 @@
 .signupContainer p {
   font-size: 1em;
   font-weight: 500;
-  color:red;
+  color: red;
 }
 
 .signupContainer a {
@@ -116,9 +116,27 @@
   border-radius: 20px;
 }
 
-/* Media query para móviles */
+/* Tablets */
+@media (max-width: 768px) {
+  .form_main {
+    width: 320px;
+    padding: 25px;
+  }
+  .heading {
+    font-size: 2em;
+  }
+}
+
+/* Móviles */
 @media (max-width: 480px) {
   .form_main {
-    width: 300px;
+    width: 280px;
+    padding: 20px;
+  }
+  .heading {
+    font-size: 1.8em;
+  }
+  .button {
+    font-size: 0.9em;
   }
 }
