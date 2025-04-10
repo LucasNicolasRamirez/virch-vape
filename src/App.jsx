@@ -34,8 +34,8 @@ function AppContent() {
         <div className={styles.cuerpo}>
             <Header />
             <div className='fondo'>
-                <div className={styles.contenido}>
                     {loading ? <Loader /> : (
+                <div className={styles.contenido}>
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/productos/:id' element={<ProductosPage />} />
@@ -46,8 +46,8 @@ function AppContent() {
                             <Route path='/carrito' element={<Carrito />} />
                             <Route path='/inventario' element={<Inventario />} />
                         </Routes>
-                    )}
                 </div>
+                    )}
                     <Footer />
             </div>
         </div>
