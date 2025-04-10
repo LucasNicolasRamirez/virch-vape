@@ -4,6 +4,7 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
+        <div className={styles.footerContainer}>
         <Box
             component="footer"
             sx={{
@@ -48,6 +49,7 @@ const Footer = () => {
                 </Box>
             </Box>
         </Box>
+        </div>
     );
 };
 

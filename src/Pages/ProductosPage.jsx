@@ -15,9 +15,11 @@ export const ProductosPage = () => {
   }, [categoria]);
 
   const productosFiltrados = useMemo(() => {
-    return categoria === 'todos-los-productos'
+    const productos = categoria === 'todos-los-productos'
       ? productosData
       : productosData.filter(producto => producto.categoriaId === categoria);
+
+    return [...productos].sort(() => Math.random() - 0.5);
   }, [categoria]);
 
   useEffect(() => {

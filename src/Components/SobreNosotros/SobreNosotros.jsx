@@ -35,7 +35,7 @@ function SobreNosotros() {
           como a los más experimentados.
         </Typography>
 
-        <Link to="/productos" className={styles.Link}>
+        <Link to="/productos/todos-los-productos" className={styles.Link}>
         <button className={styles.Button}>
           Descubre todo lo que tenemos para ofrecerte
         </button>
