@@ -37,7 +37,7 @@ function Productos() {
 const handleCategorySelect = (categoria) => {
     setOpen(false);
     if (categoria === 'Todos los productos') {
-        navigate(`/productos/todos-los-productos`); // Redirige a todos los productos
+        navigate(`/productos/todos-los-productos`); 
     } else {
         navigate(`/productos/${categoria.toLowerCase().replace(/\s+/g, '-')}`);
     }
@@ -127,7 +127,7 @@ const handleCategorySelect = (categoria) => {
                                     <MenuItem onClick={() => handleCategorySelect('Atomizadores')}>Atomizadores</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Baterías')}>Baterías</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Cargadores')}>Cargadores</MenuItem>
-                                    <MenuItem onClick={() => handleCategorySelect('Consumibles')}>Consumibles</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Consumibles')}>Repuestos</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Accesorios')}>Accesorios</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Otros')}>Otros</MenuItem>
                                 </MenuList>
