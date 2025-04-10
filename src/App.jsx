@@ -48,8 +48,8 @@ function AppContent() {
                         </Routes>
                 </div>
                     )}
-                    <Footer />
             </div>
+            <Footer />
         </div>
     );
 }
