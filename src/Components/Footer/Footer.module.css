@@ -1,11 +1,11 @@
 .footerContainer {
   width: 100%;
   background-image: url(../src/assets/imagenes/fondo.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  position:static;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-attachment: fixed; */
+  /* position:static; */
   }
   
   .tituloVirchFooter {
