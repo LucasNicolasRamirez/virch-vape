@@ -161,5 +161,55 @@
   .masterContainer {
     width: 100%;
   }
+  .productImage {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    border-radius: 10px;
+    background: rgba(10, 10, 10, 0.6);
+  }
+
   
+}
+@media (max-width: 768px) {
+  .masterContainer {
+    width: 100%;
+  }
+  .productImage {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    border-radius: 10px;
+    background: rgba(10, 10, 10, 0.6);
+  }
+}
+@media (max-width: 480px) {
+  .masterContainer {
+    width: 100%;
+  }
+  .productImage {
+    width: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .quantity {
+    flex-direction: column-reverse;
+    gap: 5px;
+  }
 }
