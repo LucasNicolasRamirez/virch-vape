@@ -16,7 +16,6 @@ import Inventario from './Pages/InventarioPage';
 import styles from '../src/Components/Cuerpo/Cuerpo.module.css';
 import './App.css';
 import { ProductosPage } from './Pages/ProductosPage';
-// import ScrollTop from './Components/BackToTopButton/BackToTop';
 
 
 function AppContent() {
@@ -51,9 +50,7 @@ function AppContent() {
                     </div>
                 )}
             </div>
-
-            {/* <ScrollTop /> */}
-            <Footer />
+            <Footer  />
         </div>
     );
 }
