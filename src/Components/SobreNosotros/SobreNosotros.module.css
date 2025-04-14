@@ -6,6 +6,7 @@
   flex-direction: row;
   gap: 20px;
   color: currentColor;
+  margin-bottom: 60px;
 }
 
 .img {

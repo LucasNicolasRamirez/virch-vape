@@ -47,10 +47,10 @@ function AppContent() {
                             <Route path='/carrito' element={<Carrito />} />
                             <Route path='/inventario' element={<Inventario />} />
                         </Routes>
+                        <Footer  />
                     </div>
                 )}
             </div>
-            <Footer  />
         </div>
     );
 }

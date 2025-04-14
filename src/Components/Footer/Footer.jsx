@@ -8,7 +8,7 @@ const Footer = () => {
         <Box
             component="footer"
             sx={{
-                width: "95%",
+                width: "100%",
                 bgcolor: "rgba(68, 68, 68, 0.8)",
                 color: "currentColor",
                 py: 4,
@@ -22,9 +22,9 @@ const Footer = () => {
         >
             <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
                 <Box >
-                    <a className={styles.developerLink}  >
+                    <p className={styles.logo} > 
                         VirchVape
-                    </a>
+                    </p>
                 </Box>
                 <Typography variant="body1" sx={{ justifyContent: 'center', alignItems: 'center', margin: '15px' }} >
                     Contacto: info@virchvape.com
