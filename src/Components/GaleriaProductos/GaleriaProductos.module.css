@@ -9,8 +9,7 @@
 /* Swiper general */
 .swiper {
     width: 100%;
-    padding: 20px;
-
+    padding-bottom: 20px;
     --swiper-pagination-bottom: 0px;
     --swiper-pagination-color: #00ffff;
     --swiper-pagination-bullet-inactive-color: gray;

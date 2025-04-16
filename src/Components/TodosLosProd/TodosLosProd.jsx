@@ -1,24 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { Typography, Button, useMediaQuery } from '@mui/material';
+import React, { useEffect, useState, useMemo } from 'react';
+import { Typography, useMediaQuery } from '@mui/material';
 import Card from '../CardProducto/CardProducto';
-import styles from '../Cuerpo/Cuerpo.module.css';
+import styles from './TodosLosProd.module.css';
 import { productosData } from '../../Data/ProductosMock';
 import { ExpandMore } from '@mui/icons-material';
 
 function TodosLosProd() {
-    const categoria = 'Todos Los Productos';
+    const categoria = 'Todos los Productos';
     const [shuffledProducts, setShuffledProducts] = useState([]);
     const [visibleCount, setVisibleCount] = useState(0);
-    const [isHovered, setIsHovered] = useState(false);
     const isSmallScreen = useMediaQuery('(max-width:600px)');
-    const initialCount = isSmallScreen ? 10 : 20;
+
+    const initialProducts = useMemo(() =>
+        [...productosData].sort(() => Math.random() - 0.5),
+        []
+    );
 
     useEffect(() => {
-        const shuffled = [...productosData].sort(() => Math.random() - 0.5);
-        setShuffledProducts(shuffled);
-        setVisibleCount(initialCount); 
-        window.scrollTo(0, 0);
-    }, [isSmallScreen, initialCount]);
+        setShuffledProducts(initialProducts);
+        setVisibleCount(isSmallScreen ? 10 : 20);
+    }, [isSmallScreen, initialProducts]);
 
     const handleLoadMore = () => {
         const increment = isSmallScreen ? 10 : 20;
@@ -26,12 +27,12 @@ function TodosLosProd() {
     };
 
     return (
-        <div className={styles.cuerpo}>
+        <div className={styles.todosLosProd}>
             <Typography variant="h5" sx={{ width: '100%' }}>
                 {categoria}
             </Typography>
 
-            <div className={styles.grid}>
+            <div className={styles.productosGrid}>
                 {shuffledProducts.slice(0, visibleCount).map(producto => (
                     <Card
                         key={producto.id}
@@ -44,30 +45,15 @@ function TodosLosProd() {
             </div>
 
             {visibleCount < shuffledProducts.length && (
-                <div
+                <button
+                    className={styles.verMas}
                     onClick={handleLoadMore}
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '8px',
-                        padding: '3px 10px',
-                        border: '1px solid currentColor',
-                        borderRadius: '50px',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease-in-out',
-                        backgroundColor: isHovered ? 'grey' : 'transparent',
-
-                    }}
-
                 >
-                    <span style={{ fontSize: '18px' }}>Ver más</span>
+                    Ver más
                     <ExpandMore sx={{
                         fontSize: 30,
                     }} />
-                </div>
+                </button>
             )}
         </div>
     );
