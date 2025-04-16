@@ -16,7 +16,7 @@ import Inventario from './Pages/InventarioPage';
 import styles from '../src/Components/Cuerpo/Cuerpo.module.css';
 import './App.css';
 import { ProductosPage } from './Pages/ProductosPage';
-
+import VerificadorEdad from './Components/VerificadorEdad/VerificadorEdad';
 
 function AppContent() {
     const [loading, setLoading] = useState(false);
@@ -37,6 +37,7 @@ function AppContent() {
             <div className='fondo'>
                 {loading ? <Loader /> : (
                     <div className={styles.contenido}>
+                        <VerificadorEdad/>
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/productos/:id' element={<ProductosPage />} />

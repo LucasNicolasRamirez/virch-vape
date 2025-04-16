@@ -28,6 +28,7 @@ function GaleriaProductos() {
                 Productos Destacados
             </Typography>
             <Swiper
+                className={styles.swiper}
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
                 slidesPerView={2}
@@ -37,7 +38,7 @@ function GaleriaProductos() {
                     dynamicBullets: true,
                     dynamicMainBullets: 3
                 }}
-                
+
                 autoplay={{ delay: 5000 }}
                 breakpoints={{
                     1920: { slidesPerView: 4 },
@@ -48,9 +49,9 @@ function GaleriaProductos() {
             >
                 {featuredProducts.map((product) => (
                     <SwiperSlide key={product.id} className={styles.swiperSlide}>
-                        <Card className={styles.card}  sx={{ maxWidth: '345px', backgroundColor: 'rgba(53, 53, 53, 0.5)', borderRadius: '20px', color: 'currentColor' }}>
+                        <Card className={styles.card} sx={{ maxWidth: '345px', backgroundColor: 'rgba(53, 53, 53, 0.5)', borderRadius: '20px', color: 'currentColor' }}>
                             <CardMedia
-                            className={styles.cardMedia}
+                                className={styles.cardMedia}
                                 component="img"
                                 image={product.image}
                                 alt={product.name}
