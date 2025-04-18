@@ -43,7 +43,7 @@ const Footer = () => {
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'end', marginRight: '90px', gap: '10px', alignItems: 'center' }} >
                     <Typography variant="body1" >Desarrollado por</Typography>
-                    <a href="https://portafolio-eosin-two.vercel.app" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
+                    <a href="https://www.google.com" target="_blank" className={styles.developerLink} sx={{ textDecoration: 'none', color: 'currentColor' }} >
                         LR.DEV
                     </a>
                 </Box>

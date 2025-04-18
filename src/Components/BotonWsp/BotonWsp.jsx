@@ -4,7 +4,7 @@ import styles from './BotonWsp.module.css'
 function BotonWsp() {
     return (
 
-            <a href="https://wa.me/542804857557" target='_blank'>
+            <a href="https://wa.me/" target='_blank'>
         <button className={styles.Btn}>
             <div className={styles.sign}>
                 <svg className={styles.socialSvg } viewBox="0 0 16 16">
