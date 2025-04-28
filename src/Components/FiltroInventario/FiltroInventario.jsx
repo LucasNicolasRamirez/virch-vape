@@ -9,20 +9,20 @@ function FiltroInventario({onFiltrar}) {
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
     const [marcaSeleccionada, setMarcaSeleccionada] = useState(null);
     const [nombreProducto, setNombreProducto] = useState('');
-    const [marcasFiltradas, setMarcasFiltradas] = useState([]); // Estado para las marcas filtradas
+    const [marcasFiltradas, setMarcasFiltradas] = useState([]); 
 
-    // Generar opciones dinámicas para categorías
+
     const Categorias = [...new Set(productosData.map((producto) => producto.categoriaId))].map((categoria) => ({ label: categoria }));
 
-    // Actualizar las marcas filtradas cuando cambie la categoría seleccionada
+   
     useEffect(() => {
         if (categoriaSeleccionada) {
             const marcas = productosData
                 .filter((producto) => producto.categoriaId === categoriaSeleccionada.label)
                 .map((producto) => producto.marca);
-            setMarcasFiltradas([...new Set(marcas)].map((marca) => ({ label: marca }))); // Elimina duplicados
+            setMarcasFiltradas([...new Set(marcas)].map((marca) => ({ label: marca }))); 
         } else {
-            // Si no hay categoría seleccionada, muestra todas las marcas
+            
             const todasLasMarcas = [...new Set(productosData.map((producto) => producto.marca))];
             setMarcasFiltradas(todasLasMarcas.map((marca) => ({ label: marca })));
         }

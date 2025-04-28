@@ -6,9 +6,8 @@ import FiltroInventario from '../Components/FiltroInventario/FiltroInventario';
 import { productosData } from '../Data/ProductosMock';
 
 function Inventario() {
-    const [productosPorCategoria, setProductosPorCategoria] = useState({}); // Estado para productos agrupados por categoría
+    const [productosPorCategoria, setProductosPorCategoria] = useState({});
 
-    // Agrupar todos los productos por categoría al cargar el componente
     useEffect(() => {
         const agrupados = productosData.reduce((acc, producto) => {
             const { categoriaId } = producto;
@@ -17,12 +16,12 @@ function Inventario() {
             return acc;
         }, {});
         setProductosPorCategoria(agrupados);
-    }, []); // Solo se ejecuta al montar el componente
+    }, []);
 
     const handleFiltrar = useCallback((filtros) => {
         const { categoria, marca, nombre } = filtros;
 
-        // Si no se aplica ningún filtro, mostrar todos los productos agrupados por categoría
+        
         if (!categoria && !marca && !nombre) {
             const agrupados = productosData.reduce((acc, producto) => {
                 const { categoriaId } = producto;
@@ -34,7 +33,7 @@ function Inventario() {
             return;
         }
 
-        // Filtrar productos según los criterios seleccionados
+        
         const productosFiltrados = productosData.filter((producto) => {
             return (
                 (!categoria || producto.categoriaId === categoria) &&
@@ -43,7 +42,7 @@ function Inventario() {
             );
         });
 
-        // Agrupar los productos filtrados por categoría
+        
         const agrupados = productosFiltrados.reduce((acc, producto) => {
             const { categoriaId } = producto;
             if (!acc[categoriaId]) acc[categoriaId] = [];
@@ -51,8 +50,8 @@ function Inventario() {
             return acc;
         }, {});
 
-        setProductosPorCategoria(agrupados); // Actualizar el estado con los productos agrupados
-    }, []); // Memorizar la función para evitar que cambie en cada renderizado
+        setProductosPorCategoria(agrupados);
+    }, []); 
 
 
     return (
