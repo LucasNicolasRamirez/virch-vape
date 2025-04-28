@@ -29,8 +29,6 @@ function Card({ id, nombre, precio, stock }) {
   const [showButton, setShowButton] = useState(false);
   const { stockMessage, stockClass } = useStockMessage(stock);
   const { addToCart } = useCart();
-
-  // Estados para el Snackbar
   const [alertOpen, setAlertOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [alertSeverity, setAlertSeverity] = useState("success");
@@ -62,7 +60,7 @@ function Card({ id, nombre, precio, stock }) {
 
   return (
     <>
-      {/* Snackbar para las alertas */}
+    
       <Snackbar
         open={alertOpen}
         autoHideDuration={3000}

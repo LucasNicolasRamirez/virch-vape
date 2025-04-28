@@ -4,14 +4,14 @@ import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
-        <div className={styles.footerContainer}>
+
         <Box
             component="footer"
             sx={{
                 width: "100%",
                 bgcolor: "rgba(68, 68, 68, 0.8)",
                 color: "currentColor",
-                py: 4,
+                py: 2,
                 margin: "0 auto",
                 mt: 0,
                 backdropFilter: "blur(2px)",
@@ -22,7 +22,7 @@ const Footer = () => {
         >
             <Box sx={{ justifyItems: 'center', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
                 <Box >
-                    <p className={styles.logo} > 
+                    <p className={styles.logo} >
                         VirchVape
                     </p>
                 </Box>
@@ -49,7 +49,7 @@ const Footer = () => {
                 </Box>
             </Box>
         </Box>
-        </div>
+
     );
 };
 

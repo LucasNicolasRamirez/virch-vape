@@ -82,12 +82,12 @@ export const productosData = [
   { id: 60, nombre: 'Cargador Nitecore', marca: 'Nitecore', precio: 8000, descripcion: 'Cargador de baterías Nitecore para una carga rápida y eficiente.', imagen: prod3, stock: 9, categoriaId: 'cargadores' },
 
   // Consumibles
-  { id: 61, nombre: 'Algodón Vape', marca: 'CottonVape', precio: 1500, descripcion: 'Algodón de alta calidad para el proceso de wicking en vapes.', imagen: prod3, stock: 0, categoriaId: 'consumibles' },
-  { id: 62, nombre: 'Hilo Kanthal', marca: 'Vape Wire', precio: 1800, descripcion: 'Hilo de Kanthal de alta resistencia para la fabricación de coils.', imagen: prod3, stock: 12, categoriaId: 'consumibles' },
-  { id: 63, nombre: 'Hilo Nichrome', marca: 'Vape Wire', precio: 2000, descripcion: 'Hilo de Nichrome para coils que permite un calentamiento rápido y duradero.', imagen: prod3, stock: 8, categoriaId: 'consumibles' },
-  { id: 64, nombre: 'Funda para Batería', marca: 'BatteryCase', precio: 1200, descripcion: 'Funda protectora para baterías de vapeo, ideal para evitar cortocircuitos.', imagen: prod3, stock: 15, categoriaId: 'consumibles' },
-  { id: 65, nombre: 'Papel de Algodón', marca: 'Cotton', precio: 1300, descripcion: 'Papel de algodón puro para reemplazo en el proceso de vaporización.', imagen: prod3, stock: 18, categoriaId: 'consumibles' },
-  { id: 66, nombre: 'Jugo de Glicerina', marca: 'VG Base', precio: 3500, descripcion: 'Base de glicerina vegetal de alta calidad para mezclar con sabores.', imagen: prod3, stock: 0, categoriaId: 'consumibles' },
+  { id: 61, nombre: 'Algodón Vape', marca: 'CottonVape', precio: 1500, descripcion: 'Algodón de alta calidad para el proceso de wicking en vapes.', imagen: prod3, stock: 0, categoriaId: 'repuestos' },
+  { id: 62, nombre: 'Hilo Kanthal', marca: 'Vape Wire', precio: 1800, descripcion: 'Hilo de Kanthal de alta resistencia para la fabricación de coils.', imagen: prod3, stock: 12, categoriaId: 'repuestos' },
+  { id: 63, nombre: 'Hilo Nichrome', marca: 'Vape Wire', precio: 2000, descripcion: 'Hilo de Nichrome para coils que permite un calentamiento rápido y duradero.', imagen: prod3, stock: 8, categoriaId: 'repuestos' },
+  { id: 64, nombre: 'Funda para Batería', marca: 'BatteryCase', precio: 1200, descripcion: 'Funda protectora para baterías de vapeo, ideal para evitar cortocircuitos.', imagen: prod3, stock: 15, categoriaId: 'repuestos' },
+  { id: 65, nombre: 'Papel de Algodón', marca: 'Cotton', precio: 1300, descripcion: 'Papel de algodón puro para reemplazo en el proceso de vaporización.', imagen: prod3, stock: 18, categoriaId: 'repuestos' },
+  { id: 66, nombre: 'Jugo de Glicerina', marca: 'VG Base', precio: 3500, descripcion: 'Base de glicerina vegetal de alta calidad para mezclar con sabores.', imagen: prod3, stock: 0, categoriaId: 'repuestos' },
 
   // Accesorios
   { id: 67, nombre: 'Pinzas Vape', marca: 'Vape Tool', precio: 1500, descripcion: 'Pinzas de precisión para un fácil manejo de coils y algodón.', imagen: prod3, stock: 25, categoriaId: 'accesorios' },

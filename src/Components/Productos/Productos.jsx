@@ -127,7 +127,7 @@ const handleCategorySelect = (categoria) => {
                                     <MenuItem onClick={() => handleCategorySelect('Atomizadores')}>Atomizadores</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Baterías')}>Baterías</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Cargadores')}>Cargadores</MenuItem>
-                                    <MenuItem onClick={() => handleCategorySelect('Consumibles')}>Repuestos</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Repuestos')}>Repuestos</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Accesorios')}>Accesorios</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Otros')}>Otros</MenuItem>
                                 </MenuList>

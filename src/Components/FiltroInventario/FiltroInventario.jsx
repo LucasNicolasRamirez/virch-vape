@@ -1,49 +1,52 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import { Button } from '@mui/material';
 import styles from '../FiltroCategorias/FiltroCategorias.module.css';
-
-const Marcas = [
-    { label: 'MVH 60ml 3mg' },
-    { label: 'EVIL 60ml 3mg' },
-    { label: 'EVIL 60ml 6mg' },
-    { label: 'SHIBUMI 60ml 3mg' },
-    { label: 'SHIBUMI 60ml 6mg' },
-    { label: 'ONE 60ml 3mg' },
-    { label: 'ONE 60ml 6mg' },
-    { label: 'EVAS 100ml 3mg' },
-    { label: "MAD CAKE 60ml 3mg" },
-    { label: 'ZOMO 60ml 3mg' }
-];
-
-const Categorias = [
-    { label: 'Liquidos' },
-    { label: 'Sales' },
-    { label: 'Pods Descartables' },
-    { label: 'Pods Recargables' },
-    { label: 'Kits de inicio' },
-    { label: 'Kits avanzados' },
-    { label: 'Mods' },
-    { label: 'Atomizadores' },
-    { label: 'Baterías' },
-    { label: 'Cargadores' },
-    { label: 'Consumibles' },
-    { label: 'Accesorios' },
-    { label: 'Otros' }
-];
+import { productosData } from '../../Data/ProductosMock';
 
 
+function FiltroInventario({onFiltrar}) {
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
+    const [marcaSeleccionada, setMarcaSeleccionada] = useState(null);
+    const [nombreProducto, setNombreProducto] = useState('');
+    const [marcasFiltradas, setMarcasFiltradas] = useState([]); // Estado para las marcas filtradas
 
-function FiltroInventario() {
+    // Generar opciones dinámicas para categorías
+    const Categorias = [...new Set(productosData.map((producto) => producto.categoriaId))].map((categoria) => ({ label: categoria }));
+
+    // Actualizar las marcas filtradas cuando cambie la categoría seleccionada
+    useEffect(() => {
+        if (categoriaSeleccionada) {
+            const marcas = productosData
+                .filter((producto) => producto.categoriaId === categoriaSeleccionada.label)
+                .map((producto) => producto.marca);
+            setMarcasFiltradas([...new Set(marcas)].map((marca) => ({ label: marca }))); // Elimina duplicados
+        } else {
+            // Si no hay categoría seleccionada, muestra todas las marcas
+            const todasLasMarcas = [...new Set(productosData.map((producto) => producto.marca))];
+            setMarcasFiltradas(todasLasMarcas.map((marca) => ({ label: marca })));
+        }
+    }, [categoriaSeleccionada]);
+
+    useEffect(() => {
+        onFiltrar({
+            categoria: categoriaSeleccionada?.label || '',
+            marca: marcaSeleccionada?.label || '',
+            nombre: nombreProducto.trim().toLowerCase(),
+        });
+    }, [categoriaSeleccionada, marcaSeleccionada, nombreProducto, onFiltrar]);
+
     return (
         <div className={styles.container}>
+            {/* Buscar por nombre */}
             <TextField
                 id="buscarProducto"
                 name='buscarProducto'
                 label="Buscar producto"
                 variant="outlined"
                 size='small'
+                value={nombreProducto}
+                onChange={(e) => setNombreProducto(e.target.value)}
                 sx={{
                     width: '40%',
                     '& .MuiOutlinedInput-root': {
@@ -69,10 +72,15 @@ function FiltroInventario() {
                     }
                 }}
             />
+
+            {/* Filtrar por categoría */}
             <Autocomplete
                 disablePortal
                 options={Categorias}
                 size='small'
+                value={categoriaSeleccionada}
+                onChange={(_, newValue) => setCategoriaSeleccionada(newValue)}
+
                 sx={{
                     width: '40%',
                     color: 'currentColor',
@@ -85,7 +93,6 @@ function FiltroInventario() {
                         },
                         '&:hover fieldset': {
                             bordercolor: 'currentColor',
-                            color: 'currentColor',
                         },
                         '&.Mui-focused fieldset': {
                             bordercolor: 'currentColor',
@@ -101,19 +108,24 @@ function FiltroInventario() {
                         color: 'currentColor',
                     },
                     '& .MuiAutocomplete-popupIndicator': {
-                        display: 'none',
+                        color: 'currentColor',
                     },
                     '& .MuiAutocomplete-clearIndicator': {
                         color: 'currentColor',
                     }
-                    
+
                 }}
+
                 renderInput={(params) => <TextField {...params} label="Categoría" />}
-            /> 
+            />
+
+            {/* Filtrar por marca */}
             <Autocomplete
                 disablePortal
-                options={Marcas}
+                options={marcasFiltradas}
                 size='small'
+                value={marcaSeleccionada}
+                onChange={(_, newValue) => setMarcaSeleccionada(newValue)}
                 sx={{
                     width: '40%',
                     color: 'currentColor',
@@ -149,7 +161,7 @@ function FiltroInventario() {
                 }}
                 renderInput={(params) => <TextField {...params} label="Marca" />}
             />
-            <Button  variant='contained' sx={{ borderRadius: '40px', color: 'currentColor', backgroundColor: '#7e7d7d' }}>Filtrar</Button>
+  
         </div>
     );
 }

@@ -5,16 +5,16 @@ import { Button } from '@mui/material';
 import styles from './FiltroCategorias.module.css';
 
 const Marcas = [
-    { label: 'MVH 60ml 3mg' },
-    { label: 'EVIL 60ml 3mg' },
-    { label: 'EVIL 60ml 6mg' },
-    { label: 'SHIBUMI 60ml 3mg' },
-    { label: 'SHIBUMI 60ml 6mg' },
-    { label: 'ONE 60ml 3mg' },
-    { label: 'ONE 60ml 6mg' },
-    { label: 'EVAS 100ml 3mg' },
-    { label: "MAD CAKE 60ml 3mg" },
-    { label: 'ZOMO 60ml 3mg' }
+    { label: 'MVH' },
+    { label: 'EVIL' },
+    { label: 'DUST' },
+    { label: 'SHIBUMI' },
+    { label: 'ONE' },
+    { label: 'SMOK' },
+    { label: 'VOOPOO' },
+    { label: 'VAPORESSO' },
+    { label: 'MAD CAKE' },
+    { label: 'ZOMO' }
 ];
 
 

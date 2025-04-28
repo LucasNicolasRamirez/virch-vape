@@ -3,29 +3,43 @@ import { Box, Typography, TextField, Button, MenuItem, Modal, InputLabel } from 
 import { Add } from "@mui/icons-material";
 import styles from "./FormInventario.module.css";
 
-const categories = [
-    { label: "Frontend", value: "frontEnd" },
-    { label: "Backend", value: "backEnd" },
-    { label: "Innovación y Gestión", value: "innovacionGestion" },
-    { label: "UX/UI & Diseño", value: "uxUiDiseño" },
-    { label: "DevOps", value: "devOps" },
-    { label: "Mobile Development", value: "mobileDevelopment" },
-    { label: "Data Science", value: "dataScience" },
-    { label: "Otros", value: "otros" },
-];
 
 function FormInventario() {
-
     const [open, setOpen] = useState(false);
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
+    const [mostrarNicotina, setMostrarNicotina] = useState(false);
+    const [nicotinaSeleccionada, setNicotinaSeleccionada] = useState('');
+    const [mostrarTamanos, setMostrarTamanos] = useState(false);
+    const [tamanoSeleccionado, setTamanoSeleccionado] = useState('');
+    const [archivoSeleccionado, setArchivoSeleccionado] = useState('');
+    const [imagenPreview, setImagenPreview] = useState(null);
 
     const handleOpen = () => setOpen(true);
+    const handleClose = () => {
+        setOpen(false);
+        setImagenPreview(null);
+    };
+
     const handleCategorySelect = (categoria) => {
         setCategoriaSeleccionada(categoria);
+
+        const categoriasConNicotina = ["liquidos", "sales"];
+        setMostrarNicotina(categoriasConNicotina.includes(categoria));
+
+        const categoriasConTamanos = ["liquidos", "sales"];
+        setMostrarTamanos(categoriasConTamanos.includes(categoria));
     };
-    const handleClose = () => setOpen(false);
 
-    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
-
+    const handleArchivoChange = (e) => {
+        const archivo = e.target.files[0];
+        if (archivo) {
+            setArchivoSeleccionado(archivo.name);
+            setImagenPreview(URL.createObjectURL(archivo));
+        } else {
+            setArchivoSeleccionado('');
+            setImagenPreview(null);
+        }
+    };
 
 
     return (
@@ -142,6 +156,63 @@ function FormInventario() {
                                 <MenuItem value="accesorios">Accesorios</MenuItem>
                                 <MenuItem value="otros">Otros</MenuItem>
                             </TextField>
+
+                            {mostrarNicotina && (
+                                <TextField
+                                    id="nicotina"
+                                    name="nicotina"
+                                    select
+                                    fullWidth
+                                    label="Porcentaje de nicotina"
+                                    value={nicotinaSeleccionada}
+                                    onChange={(e) => setNicotinaSeleccionada(e.target.value)}
+                                    sx={{
+                                        color: "#fff",
+                                        "& .MuiSelect-icon": { color: "#fff" },
+                                        "& .MuiInputBase-input": { color: "#fff" },
+                                        "& .MuiFormLabel-root": { color: "#fff" },
+                                        "& .MuiOutlinedInput-root": {
+                                            backgroundColor: "#2c2c2c",
+                                            borderRadius: "10px",
+                                        },
+                                    }}
+                                >
+                                    <MenuItem value="0">0 mg</MenuItem>
+                                    <MenuItem value="3">3 mg</MenuItem>
+                                    <MenuItem value="6">6 mg</MenuItem>
+                                    <MenuItem value="12">12 mg</MenuItem>
+                                    <MenuItem value="25">25 mg</MenuItem>
+                                    <MenuItem value="35">35 mg</MenuItem>
+                                </TextField>
+                            )}
+
+                            {mostrarTamanos && (
+                                <TextField
+                                    id="tamano"
+                                    name="tamano"
+                                    select
+                                    fullWidth
+                                    label="Tamaño del producto"
+                                    value={tamanoSeleccionado}
+                                    onChange={(e) => setTamanoSeleccionado(e.target.value)}
+                                    sx={{
+                                        color: "#fff",
+                                        "& .MuiSelect-icon": { color: "#fff" },
+                                        "& .MuiInputBase-input": { color: "#fff" },
+                                        "& .MuiFormLabel-root": { color: "#fff" },
+                                        "& .MuiOutlinedInput-root": {
+                                            backgroundColor: "#2c2c2c",
+                                            borderRadius: "10px",
+                                        },
+                                    }}
+                                >
+                                    <MenuItem value="30">30 ml</MenuItem>
+                                    <MenuItem value="60">60 ml</MenuItem>
+                                    <MenuItem value="100">100 ml</MenuItem>
+                                    <MenuItem value="120">120 ml</MenuItem>
+                                </TextField>
+                            )}
+
                             <TextField
                                 id="precio"
                                 name='precio'
@@ -174,23 +245,70 @@ function FormInventario() {
                             />
 
 
-                            <TextField
-                                id="imagen"
-                                name='imagen'
-                                fullWidth
-                                label="Imagen del producto"
-                                type="file"
-                                
-                                sx={{
-                                    ":active": { color: "#fff" },
-                                    "& .MuiInputBase-input": { color: "#fff" },
-                                    "& .MuiFormLabel-root": { color: "#fff" },
-                                    "& .MuiOutlinedInput-root": {
-                                        backgroundColor: "#2c2c2c",
-                                        borderRadius: "10px",
-                                    },
-                                }}
-                            />
+                            <Box sx={{ display: "flex", alignItems: "center", gap: 2, backgroundColor: "#2c2c2c", padding: 1, borderRadius: "10px" }}>
+
+                                <input
+                                    id="imagen"
+                                    name="imagen"
+                                    type="file"
+                                    style={{ display: "none" }}
+                                    onChange={handleArchivoChange}
+                                />
+                                <label htmlFor="imagen">
+                                    <Button
+                                        variant="contained"
+                                        component="span"
+                                        sx={{
+                                            backgroundColor: "#2A7AE4",
+                                            color: "#fff",
+                                            borderRadius: "10px",
+                                            padding: "10px 20px",
+                                            "&:hover": { backgroundColor: "#5595E9" },
+                                        }}
+                                    >
+                                        Subir Imagen del producto
+                                    </Button>
+                                </label>
+                                {archivoSeleccionado && (
+                                    <Typography sx={{ color: "#fff", fontSize: "0.9rem" }}>
+                                        {archivoSeleccionado}
+                                    </Typography>
+                                )}
+                                {archivoSeleccionado && (
+                                    <Button
+                                        variant="outlined"
+                                        sx={{
+                                            color: "#fff",
+                                            borderColor: "#fff",
+                                            borderRadius: "10px",
+                                            padding: "5px 10px",
+                                            "&:hover": { backgroundColor: "#ff4d4d", borderColor: "#ff4d4d" },
+                                        }}
+                                        onClick={() => {
+                                            setArchivoSeleccionado('');
+                                            setImagenPreview(null);
+                                        }}
+                                    >
+                                        Eliminar imagen
+                                    </Button>
+                                )}
+                            </Box>
+                            {imagenPreview && (
+                                <Box sx={{ marginTop: 2, textAlign: "center" }}>
+                                    <Typography sx={{ color: "#fff", marginBottom: 1 }}>Vista previa:</Typography>
+                                    <Box
+                                        component="img"
+                                        src={imagenPreview}
+                                        alt="Vista previa"
+                                        sx={{
+                                            maxWidth: "100%",
+                                            maxHeight: 200,
+                                            borderRadius: "10px",
+                                            border: "1px solid #fff",
+                                        }}
+                                    />
+                                </Box>
+                            )}
 
                             <TextField
                                 id="descripcion"
@@ -210,7 +328,7 @@ function FormInventario() {
                             />
                             <Box sx={{ display: "flex", justifyContent: "space-between", marginTop: 2 }}>
                                 <Button
-                                    //   type="submit" 
+                                    type="submit"
                                     variant="contained"
                                     sx={{
                                         backgroundColor: "#2A7AE4",

@@ -1,6 +1,6 @@
 .header {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Corregido */
+    grid-template-columns: repeat(3, 1fr); 
     position: fixed;
     top: 0;
     left: 0;

@@ -7,6 +7,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import styles from "./ItemsCarrito.module.css";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import image from "../../assets/iconos/image.png";
 
 const ItemsCarrito = () => {
   const { cart, increment, decrement, deleteProduct } = useCart();
@@ -40,6 +41,23 @@ const ItemsCarrito = () => {
           Se eliminó el producto del carrito
         </Alert>
       </Snackbar>
+
+      {cart.length === 0 ? (
+        <div className={styles.emptyCart}>
+          <h2 className={styles.emptyCartTitle}>Tu carrito está vacío</h2>
+          <img
+            className={styles.emptyCartImage}
+            src={image}
+            alt="Carrito vacío"
+          />
+          
+          <p className={styles.emptyCartText}>Agrega productos para comenzar a comprar.</p>
+        
+          <Button variant="contained" onClick={() => window.location.href = "/productos/todos-los-productos"}>
+            Ir a Productos
+          </Button>
+        </div>
+      ) : (
 
       <div className={styles.masterContainer}>
         <div className={styles.card}>
@@ -93,6 +111,7 @@ const ItemsCarrito = () => {
           </div>
         </div>
       </div>
+      )}
     </>
   );
 };
