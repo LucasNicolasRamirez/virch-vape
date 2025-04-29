@@ -17,6 +17,7 @@ import styles from '../src/Components/Cuerpo/Cuerpo.module.css';
 import './App.css';
 import { ProductosPage } from './Pages/ProductosPage';
 import VerificadorEdad from './Components/VerificadorEdad/VerificadorEdad';
+import NotFound from './Components/NotFound/NotFound';
 
 function AppContent() {
     const [loading, setLoading] = useState(false);
@@ -31,14 +32,17 @@ function AppContent() {
         return () => clearTimeout(timer);
     }, [pathname]);
 
+
+    
     return (
         <div className={styles.cuerpo}>
             <Header />
             <div className='fondo'>
                 {loading ? <Loader /> : (
                     <div className={styles.contenido}>
-                        <VerificadorEdad/>
+                        <VerificadorEdad />
                         <Routes>
+                            <Route path="*" element={<NotFound />} />
                             <Route path='/' element={<Home />} />
                             <Route path='/productos/:id' element={<ProductosPage />} />
                             <Route path='/contacto' element={<ContactoPage />} />
@@ -48,7 +52,7 @@ function AppContent() {
                             <Route path='/carrito' element={<Carrito />} />
                             <Route path='/inventario' element={<Inventario />} />
                         </Routes>
-                        <Footer  />
+                        <Footer />
                     </div>
                 )}
             </div>

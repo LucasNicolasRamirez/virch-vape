@@ -13,9 +13,6 @@ function MenuPequeno() {
 
     const handleNavigation = (path) => {
         navigate(path);
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 0);
         setOpen(false);
         setSubMenuOpen(false);
     };
@@ -41,7 +38,6 @@ function MenuPequeno() {
         setOpen(false);
         setSubMenuOpen(false);
         navigate(`/productos/${categoria.toLowerCase().replace(/\s+/g, '-')}`);
-        window.scrollTo(0, 0);
     };
 
     const renderProductos = () => {
@@ -57,7 +53,7 @@ function MenuPequeno() {
             "Atomizadores",
             "Baterías",
             "Cargadores",
-            "Consumibles",
+            "Repuestos",
             "Accesorios",
             "Otros",
         ];
@@ -127,7 +123,7 @@ function MenuPequeno() {
                                     <MenuItem onClick={(event) => {
                                         handleNavigation("/");
                                     }}
-                                    >Home
+                                    >Inicio
                                     </MenuItem>
 
                                     <MenuItem

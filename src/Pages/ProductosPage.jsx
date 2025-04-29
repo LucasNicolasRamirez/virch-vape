@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useState, useCallback} from 'react';
 import { useParams } from 'react-router-dom';
 import styles from '../Components/Cuerpo/Cuerpo.module.css';
 import { Typography, Divider } from '@mui/material';
@@ -8,23 +8,34 @@ import { productosData } from '../Data/ProductosMock';
 
 export const ProductosPage = () => {
   const { id: categoria } = useParams();
+  const [filtro, setFiltro] = useState({ categoria: '', marca: '', nombre: '', nicotina: '', tamano: '' });
 
   const categoriaFormateada = useMemo(() => {
-    if (!categoria || categoria === 'todos-los-productos') return 'Todos los Productos';
-    return categoria.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      if (!categoria || categoria === 'todos-los-productos') return 'Todos los Productos';
+      return categoria.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   }, [categoria]);
 
   const productosFiltrados = useMemo(() => {
-    const productos = categoria === 'todos-los-productos'
-      ? productosData
-      : productosData.filter(producto => producto.categoriaId === categoria);
+      const productos = categoria === 'todos-los-productos'
+          ? productosData
+          : productosData.filter(producto => producto.categoriaId === categoria);
 
-    return [...productos].sort(() => Math.random() - 0.5);
-  }, [categoria]);
+      // Aplicar filtros de marca y nombre
+      return productos.filter(producto => {
+        const coincideMarca = filtro.marca ? producto.marca.toLowerCase().includes(filtro.marca.toLowerCase()) : true;
+        const coincideNombre = filtro.nombre ? producto.nombre.toLowerCase().includes(filtro.nombre.toLowerCase()) : true;
+        const coincideNicotina = filtro.nicotina ? producto.nicotina?.toLowerCase().includes(filtro.nicotina.toLowerCase()) : true;
+        const coincideTamano = filtro.tamano ? producto.tamano?.toLowerCase().includes(filtro.tamano.toLowerCase()) : true;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+        return coincideMarca && coincideNombre && coincideNicotina && coincideTamano;
+    });
+}, [categoria, filtro]);
+
+
+
+  const handleFilterChange = useCallback((nuevoFiltro) => {
+    setFiltro(nuevoFiltro);
+}, []);
 
   return (
     <div className={styles.cuerpo}>
@@ -34,7 +45,7 @@ export const ProductosPage = () => {
           Explora nuestra sección de {categoriaFormateada}
         </Typography>
 
-        <FiltroCat />
+        <FiltroCat categoriaActual={categoria} onFiltrar={handleFilterChange} />
         <Divider color="gray" />
 
         <div className={styles.grid}>

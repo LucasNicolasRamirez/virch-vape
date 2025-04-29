@@ -18,7 +18,7 @@ const CardInventario = ({producto}) => {
                 <Typography className={styles.price}>
                     <span>${producto.precio}</span>
                 </Typography>
-                    <span>Stock:{producto.stock}</span>
+                    <span>Stock: {producto.stock} u.</span>
                 <Typography className={styles.description}>Descripción: </Typography>
                 <Typography className={styles.textoDesc}>{producto.descripcion}</Typography>
                 <div className={styles.cardBtns} >

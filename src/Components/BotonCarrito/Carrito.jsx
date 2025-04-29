@@ -21,9 +21,7 @@ function IconoCarrito() {
 
     const handleCartClick = () => {
         navigate("/carrito"); 
-        setTimeout(() => {
-            window.scrollTo(0, 0); 
-        }, 0);
+
     };
 
     return (

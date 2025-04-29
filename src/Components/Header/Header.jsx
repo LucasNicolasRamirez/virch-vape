@@ -13,9 +13,7 @@ function Header() {
 
     const handleNavigation = (path) => {
         navigate(path);
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 0);
+    
     };
 
     return (
@@ -27,7 +25,7 @@ function Header() {
 
                     <div className={styles.nav1}>
                         <Button sx={{ color: "#cecece", borderRadius: "20px", fontSize: '0,75rem' }} onClick={() => handleNavigation("/")}>
-                            Home
+                            Inicio
                         </Button>
 
                         <Productos />

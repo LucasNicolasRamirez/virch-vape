@@ -9,17 +9,17 @@ import {
 } from "@mui/material";
 
 const AgeVerificationModal = () => {
-  const [open, setOpen] = useState(false); // Inicialmente cerrado
+  const [open, setOpen] = useState(false); 
 
   useEffect(() => {
     const isVerified = localStorage.getItem("isAgeVerified");
     if (!isVerified) {
-      setOpen(true); // Solo lo muestra si no está aceptado
+      setOpen(true); 
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("isAgeVerified", "true"); // Guarda la verificación
+    localStorage.setItem("isAgeVerified", "true"); 
     setOpen(false);
   };
 
@@ -50,14 +50,14 @@ const AgeVerificationModal = () => {
             bgcolor: "lightgrey",
             borderRadius: 2,
             boxShadow: 24,
-            p: { xs: 2, sm: 4 }, // Adaptar el padding según el tamaño de la pantalla
-            maxWidth: { xs: "90%", sm: 400 }, // Ancho máximo para pantallas pequeñas
+            p: { xs: 2, sm: 4 }, 
+            maxWidth: { xs: "90%", sm: 400 }, 
             textAlign: "center",
-            width: "100%", // Asegura que ocupe todo el espacio disponible
+            width: "100%", 
           }}
         >
           <Typography
-            variant="h5" // Usamos h5 en lugar de h4 en pantallas pequeñas
+            variant="h5" 
             gutterBottom
             sx={{ color: "red", fontWeight: "bold" }}
           >

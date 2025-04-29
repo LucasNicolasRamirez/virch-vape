@@ -2,20 +2,20 @@ import prod3 from '../assets/imagenes/prod3.png';
 
 export const productosData = [
   // Líquidos
-  { id: 1, nombre: 'Drag X', marca: 'Voopoo', precio: 120000, descripcion: 'Lemon pie, Merengue y una masa crujiente dando un sabor único y el balance perfecto entre lo cítrico y lo dulce.', imagen: prod3, stock: 10, categoriaId: 'liquidos' },
-  { id: 2, nombre: 'Kodama', marca: 'Evas', precio: 21450, descripcion: 'Lemon pie, Merengue y una masa crujiente dando un sabor único y el balance perfecto entre lo cítrico y lo dulce.', imagen: prod3, stock: 10, categoriaId: 'liquidos' },
-  { id: 3, nombre: 'Líquido VaperOne', marca: 'VaperOne', precio: 9500, descripcion: 'Sabor frutal con mezcla de fresa y mora, ideal para una experiencia suave y refrescante.', imagen: prod3, stock: 8, categoriaId: 'liquidos' },
-  { id: 4, nombre: 'Frosty Lemon', marca: 'Frosty', precio: 12500, descripcion: 'Limonada fresca con un toque de menta, refrescante y sabroso para cualquier ocasión.', imagen: prod3, stock: 5, categoriaId: 'liquidos' },
-  { id: 5, nombre: 'Navy Mint', marca: 'Navy', precio: 10500, descripcion: 'Menta suave con un toque de mentol, ideal para quienes disfrutan de sabores frescos.', imagen: prod3, stock: 15, categoriaId: 'liquidos' },
-  { id: 6, nombre: 'Mango Blast', marca: 'TropicalVape', precio: 13000, descripcion: 'Mezcla de mango y cítricos, ofreciendo una explosión de sabor tropical.', imagen: prod3, stock: 7, categoriaId: 'liquidos' },
+  { id: 1, nombre: 'Drag X', marca: 'Voopoo', tamano:"100ml", nicotina:"3mg", precio: 120000, descripcion: 'Lemon pie, Merengue y una masa crujiente dando un sabor único y el balance perfecto entre lo cítrico y lo dulce.', imagen: prod3, stock: 10, categoriaId: 'liquidos' },
+  { id: 2, nombre: 'Kodama', marca: 'Evas',tamano:"30ml", nicotina:"3mg", precio: 21450, descripcion: 'Lemon pie, Merengue y una masa crujiente dando un sabor único y el balance perfecto entre lo cítrico y lo dulce.', imagen: prod3, stock: 10, categoriaId: 'liquidos' },
+  { id: 3, nombre: 'Líquido VaperOne', marca: 'VaperOne', tamano:"100ml", nicotina:"0mg", precio: 9500, descripcion: 'Sabor frutal con mezcla de fresa y mora, ideal para una experiencia suave y refrescante.', imagen: prod3, stock: 8, categoriaId: 'liquidos' },
+  { id: 4, nombre: 'Frosty Lemon', marca: 'Frosty', tamano:"60ml", nicotina:"6mg", precio: 12500, descripcion: 'Limonada fresca con un toque de menta, refrescante y sabroso para cualquier ocasión.', imagen: prod3, stock: 3, categoriaId: 'liquidos' },
+  { id: 5, nombre: 'Navy Mint', marca: 'Navy', tamano:"100ml", nicotina:"0mg", precio: 10500, descripcion: 'Menta suave con un toque de mentol, ideal para quienes disfrutan de sabores frescos.', imagen: prod3, stock: 15, categoriaId: 'liquidos' },
+  { id: 6, nombre: 'Mango Blast', marca: 'TropicalVape', tamano:"120ml", nicotina:"6mg", precio: 13000, descripcion: 'Mezcla de mango y cítricos, ofreciendo una explosión de sabor tropical.', imagen: prod3, stock: 7, categoriaId: 'liquidos' },
 
   // Sales
-  { id: 7, nombre: 'Salt Nic Lemon', marca: 'Vape Salt', precio: 7800, descripcion: 'Sales de nicotina con sabor a limón fresco y ácido.', imagen: prod3, stock: 10, categoriaId: 'sales' },
-  { id: 8, nombre: 'Cool Mint Salt', marca: 'Frosty', precio: 8500, descripcion: 'Combinación de menta y sales de nicotina, con un toque fresco y suave.', imagen: prod3, stock: 4, categoriaId: 'sales' },
-  { id: 9, nombre: 'Nicotine Salt - Red Fruits', marca: 'Vape Salt', precio: 7800, descripcion: 'Una mezcla de frutas rojas con sales de nicotina para una experiencia dulce y fuerte.', imagen: prod3, stock: 12, categoriaId: 'sales' },
-  { id: 10, nombre: 'Tobacco Salt', marca: 'ClassicVape', precio: 7000, descripcion: 'Sabor de tabaco clásico con un toque de sales de nicotina, ideal para los amantes del tabaco.', imagen: prod3, stock: 5, categoriaId: 'sales' },
-  { id: 11, nombre: 'Fruity Blast Salt', marca: 'Vape Salt', precio: 8200, descripcion: 'Mezcla de frutas tropicales con un toque dulce de sales de nicotina.', imagen: prod3, stock: 8, categoriaId: 'sales' },
-  { id: 12, nombre: 'Mango Ice Salt', marca: 'Tropical Salt', precio: 8500, descripcion: 'Mango fresco con un toque de hielo, ideal para los días calurosos.', imagen: prod3, stock: 6, categoriaId: 'sales' },
+  { id: 7, nombre: 'Salt Nic Lemon', marca: 'Vape Salt',  tamano:"30ml", nicotina:"12mg", precio: 7800, descripcion: 'Sales de nicotina con sabor a limón fresco y ácido.', imagen: prod3, stock: 10, categoriaId: 'sales' },
+  { id: 8, nombre: 'Cool Mint Salt', marca: 'Frosty',  tamano:"60ml", nicotina:"25mg", precio: 8500, descripcion: 'Combinación de menta y sales de nicotina, con un toque fresco y suave.', imagen: prod3, stock: 4, categoriaId: 'sales' },
+  { id: 9, nombre: 'Nicotine Salt - Red Fruits', marca: 'Vape Salt',  tamano:"30ml", nicotina:"35mg", precio: 7800, descripcion: 'Una mezcla de frutas rojas con sales de nicotina para una experiencia dulce y fuerte.', imagen: prod3, stock: 12, categoriaId: 'sales' },
+  { id: 10, nombre: 'Tobacco Salt', marca: 'ClassicVape',  tamano:"60ml", nicotina:"12mg", precio: 7000, descripcion: 'Sabor de tabaco clásico con un toque de sales de nicotina, ideal para los amantes del tabaco.', imagen: prod3, stock: 5, categoriaId: 'sales' },
+  { id: 11, nombre: 'Fruity Blast Salt', marca: 'Vape Salt',  tamano:"30ml", nicotina:"25mg", precio: 8200, descripcion: 'Mezcla de frutas tropicales con un toque dulce de sales de nicotina.', imagen: prod3, stock: 8, categoriaId: 'sales' },
+  { id: 12, nombre: 'Mango Ice Salt', marca: 'Tropical Salt',  tamano:"60ml", nicotina:"35mg", precio: 8500, descripcion: 'Mango fresco con un toque de hielo, ideal para los días calurosos.', imagen: prod3, stock: 6, categoriaId: 'sales' },
 
   // Pods Descartables
   { id: 13, nombre: 'VapePod Mango', marca: 'TropicalVape', precio: 11000, descripcion: 'Vape pod desechable con sabor mango tropical, fresco y delicioso.', imagen: prod3, stock: 6, categoriaId: 'pods-descartables' },

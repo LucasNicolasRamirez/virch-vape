@@ -82,7 +82,7 @@ const ItemsCarrito = () => {
                     <RemoveIcon sx={{ color: 'white' }} />
                   </Button>
                   <span className={styles.quantityValue}>{item.count}</span>
-                  <Button onClick={() => increment(item.id)} disabled={item.count === 10}>
+                  <Button onClick={() => increment(item.id)}   disabled={item.count === Math.min(item.stock, 10)}>
                     <AddIcon sx={{ color: 'white' }} />
                   </Button>
                 </div>

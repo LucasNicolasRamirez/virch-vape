@@ -41,12 +41,9 @@ const handleCategorySelect = (categoria) => {
     } else {
         navigate(`/productos/${categoria.toLowerCase().replace(/\s+/g, '-')}`);
     }
-    window.scrollTo(0, 0);
 };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     return (
         <div>
@@ -125,7 +122,7 @@ const handleCategorySelect = (categoria) => {
                                     <MenuItem onClick={() => handleCategorySelect('Kits avanzados')}>Kits avanzados</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Mods')}>Mods</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Atomizadores')}>Atomizadores</MenuItem>
-                                    <MenuItem onClick={() => handleCategorySelect('Baterías')}>Baterías</MenuItem>
+                                    <MenuItem onClick={() => handleCategorySelect('Baterias')}>Baterías</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Cargadores')}>Cargadores</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Repuestos')}>Repuestos</MenuItem>
                                     <MenuItem onClick={() => handleCategorySelect('Accesorios')}>Accesorios</MenuItem>

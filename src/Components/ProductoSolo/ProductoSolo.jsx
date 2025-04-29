@@ -48,6 +48,7 @@ function ProductoSolo() {
                         <p>Precio por unidad:</p>
                         <p className={styles.precio}> ${producto.precio}</p>
                     </div>
+                        <p>Stock: {producto.stock} u.</p>
                     <div className={styles.quantityContainer}>
                         <p>Cantidad:</p>
                         <Box sx={{ minWidth: 80, color: 'currentColor' }}>
@@ -71,7 +72,7 @@ function ProductoSolo() {
                                 </NativeSelect>
                             </FormControl>
                         </Box>
-                        <Button variant="contained" onClick={handleAddToCart}>Agregar al carrito</Button>
+                        <Button variant="contained" onClick={handleAddToCart} disabled={producto.stock === 0}>Agregar al carrito</Button>
                     </div>
                 </div>
             </div>
