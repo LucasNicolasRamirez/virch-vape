@@ -75,6 +75,24 @@
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+.verMas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 3px 10px;
+    border: 1px solid currentColor;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    color: currentColor;
+    margin-bottom: 20px;
+}
+
+.verMas:hover {
+    background-color: grey;
+}
 
 @keyframes fadeIn {
     0% {

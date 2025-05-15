@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Divider } from '@mui/material';
+import { Typography, Divider, Fade } from '@mui/material';
 import styles from '../Components/Cuerpo/Cuerpo.module.css';
 import GaleriaImagenes from '../Components/GaleriaImagenes/GaleriaImagenes';
 import GaleriaProductos from '../Components/GaleriaProductos/GaleriaProductos';
@@ -9,28 +9,32 @@ import TodosLosProd from '../Components/TodosLosProd/TodosLosProd';
 function Home() {
     return (
         <div className={styles.cuerpo}>
-            <div className={styles.contenido}>
-                <Typography variant="h3"  sx={{ textAlign: 'center', marginBottom: '20px' }}>
-                    Bienvenido a VirchVape
-                </Typography>
+            <Fade in={true} timeout={600}>
+                <div className={styles.contenido}>
 
-                <Divider color="gray" />
+                    <Typography variant="h3" sx={{ textAlign: 'center', marginBottom: '20px' }}>
+                        Bienvenido a VirchVape
+                    </Typography>
 
-                <GaleriaImagenes/>
+                    <Divider color="gray" />
 
-                <Divider color="gray" />
+                    <GaleriaImagenes />
 
-                <GaleriaProductos/>
-                
-                <Divider color="gray" />
-                
-                <TodosLosProd/>
+                    <Divider color="gray" />
 
-                <Divider color="gray" />
+                    <GaleriaProductos />
 
-                <SobreNosotros/>
-                
-            </div>
+                    <Divider color="gray" />
+
+                    <TodosLosProd />
+
+                    <Divider color="gray" />
+
+                    <SobreNosotros />
+
+
+                </div>
+            </Fade>
         </div>
     );
 }

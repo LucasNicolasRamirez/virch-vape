@@ -39,40 +39,7 @@
     background-color: grey;
 }
 
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .productosGrid > * {
-    animation: fadeIn 0.5s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .productosGrid > *:nth-child(1n) {
-    animation-delay: 0ms;
-  }
-  
-  .productosGrid > *:nth-child(2n) {
-    animation-delay: 100ms;
-  }
-  
-  .productosGrid > *:nth-child(3n) {
-    animation-delay: 200ms;
-  }
-  
-  .productosGrid > *:nth-child(4n) {
-    animation-delay: 300ms;
-  }
-  
-  .productosGrid > *:nth-child(5n) {
-    animation-delay: 400ms;
-  }
+
 
 @media (max-width: 1280px) {
     .productosGrid {

@@ -48,6 +48,13 @@
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     justify-self: center;
     text-align: center;
+    cursor: pointer;
+  }
+
+  .title:hover {
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
   }
   
   .login,
@@ -80,6 +87,11 @@
       justify-self: center;
       justify-content: space-between;
     }
+    .botonTema {
+      position: fixed;
+      right: 15px;
+      z-index: 999;
+    }
   }
   
   @media (max-width: 480px) {
@@ -97,9 +109,9 @@
     }
   
     .botonTema {
-      position: absolute;
-      top: 80px;
-      right: 2%;
+      position: relative;
+      top: 90px;
+      left: 170px;
       scale: 1;
       z-index: 0;
     }
@@ -107,9 +119,11 @@
   
   @media (max-width: 420px) {
     .botonTema {
-      top: 80px;
-      right: 2%;
-      position: absolute;
+    position: relative;
+      top: 90px;
+      left: 150px;
+      scale: 1;
+      z-index: 0;
     }
   }
   

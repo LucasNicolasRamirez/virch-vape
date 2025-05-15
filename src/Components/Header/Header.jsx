@@ -38,7 +38,7 @@ function Header() {
 
                 </div>
 
-                <div className={styles.title}>
+                <div className={styles.title}  onClick={() => handleNavigation("/")}>
                     VirchVape
                 </div>
 

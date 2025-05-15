@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { Fade } from '@mui/material';
 import CardInventario from '../Components/ControlDeInventario/Inventario';
 import styles from '../Components/Cuerpo/Cuerpo.module.css';
 import FormInventario from '../Components/FormInventario/FormInventario';
@@ -21,7 +22,7 @@ function Inventario() {
     const handleFiltrar = useCallback((filtros) => {
         const { categoria, marca, nombre } = filtros;
 
-        
+
         if (!categoria && !marca && !nombre) {
             const agrupados = productosData.reduce((acc, producto) => {
                 const { categoriaId } = producto;
@@ -33,7 +34,7 @@ function Inventario() {
             return;
         }
 
-        
+
         const productosFiltrados = productosData.filter((producto) => {
             return (
                 (!categoria || producto.categoriaId === categoria) &&
@@ -42,7 +43,7 @@ function Inventario() {
             );
         });
 
-        
+
         const agrupados = productosFiltrados.reduce((acc, producto) => {
             const { categoriaId } = producto;
             if (!acc[categoriaId]) acc[categoriaId] = [];
@@ -51,27 +52,29 @@ function Inventario() {
         }, {});
 
         setProductosPorCategoria(agrupados);
-    }, []); 
+    }, []);
 
 
     return (
         <div className={styles.cuerpo}>
-            <div className={styles.contenido}>
-                <FormInventario />
-                <FiltroInventario onFiltrar={handleFiltrar} />
-                <div className={styles.contenidoInventario}>
-                    {Object.keys(productosPorCategoria).map((categoriaId) => (
-                        <div key={categoriaId} className={styles.categoria}>
-                            <h3 className={styles.tituloCategoria} >{categoriaId.toUpperCase()}</h3> 
-                            <div className={styles.productos}>
-                                {productosPorCategoria[categoriaId].map((producto) => (
-                                    <CardInventario key={producto.id} producto={producto} />
-                                ))}
+            <Fade in={true} timeout={600}>
+                <div className={styles.contenido}>
+                    <FormInventario />
+                    <FiltroInventario onFiltrar={handleFiltrar} />
+                    <div className={styles.contenidoInventario}>
+                        {Object.keys(productosPorCategoria).map((categoriaId) => (
+                            <div key={categoriaId} className={styles.categoria}>
+                                <h3 className={styles.tituloCategoria} >{categoriaId.toUpperCase()}</h3>
+                                <div className={styles.productos}>
+                                    {productosPorCategoria[categoriaId].map((producto) => (
+                                        <CardInventario key={producto.id} producto={producto} />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </Fade>
         </div>
     );
 }

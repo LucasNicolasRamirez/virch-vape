@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Typography, useMediaQuery } from '@mui/material';
+import { Typography, useMediaQuery, Fade } from '@mui/material';
 import Card from '../CardProducto/CardProducto';
 import styles from './TodosLosProd.module.css';
 import { productosData } from '../../Data/ProductosMock';
@@ -34,13 +34,16 @@ function TodosLosProd() {
 
             <div className={styles.productosGrid}>
                 {shuffledProducts.slice(0, visibleCount).map(producto => (
-                    <Card
-                        key={producto.id}
-                        id={producto.id}
-                        nombre={producto.nombre}
-                        precio={producto.precio}
-                        stock={producto.stock}
-                    />
+                    <Fade in={true} timeout={600} key={producto.id}>
+              <div>
+                <Card
+                  id={producto.id}
+                  nombre={producto.nombre}
+                  precio={producto.precio}
+                  stock={producto.stock}
+                />
+              </div>
+            </Fade>
                 ))}
             </div>
 

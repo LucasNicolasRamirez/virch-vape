@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from '../Components/Cuerpo/Cuerpo.module.css';
-import { Stack, Typography, Box, Divider } from '@mui/material';
+import { Stack, Typography, Box, Divider, Fade } from '@mui/material';
 import ContactImage from '../assets/imagenes/logo.png';
 import RedesSociales from '../Components/RedesSociales/RedesSociales';
 
 
 function ContactoPage() {
     return (
+
+        <Fade in={true} timeout={600}>
 
         <div className={styles.contenido}>
             <Typography variant="h4" >
@@ -72,6 +74,7 @@ function ContactoPage() {
             </Stack>
 
         </div>
+        </Fade>
 
     );
 }
