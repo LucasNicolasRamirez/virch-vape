@@ -5,6 +5,7 @@ import styles from '../Components/Cuerpo/Cuerpo.module.css';
 import FormInventario from '../Components/FormInventario/FormInventario';
 import FiltroInventario from '../Components/FiltroInventario/FiltroInventario';
 import { productosData } from '../Data/ProductosMock';
+import ListaStock from '../Components/ListaStock/ListaStock';
 
 function Inventario() {
     const [productosPorCategoria, setProductosPorCategoria] = useState({});
@@ -61,6 +62,7 @@ function Inventario() {
                 <div className={styles.contenido}>
                     <FormInventario />
                     <FiltroInventario onFiltrar={handleFiltrar} />
+                    <ListaStock />
                     <div className={styles.contenidoInventario}>
                         {Object.keys(productosPorCategoria).map((categoriaId) => (
                             <div key={categoriaId} className={styles.categoria}>

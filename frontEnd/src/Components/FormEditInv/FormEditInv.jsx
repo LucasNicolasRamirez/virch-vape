@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Box, Typography, TextField, Button, MenuItem, Modal, InputLabel } from "@mui/material";
 import { Add } from "@mui/icons-material";
-import styles from "./FormInventario.module.css";
+import styles from "../FormInventario/FormInventario.module.css";
 
 
-function FormInventario() {
+function FormEditInv() {
     const [open, setOpen] = useState(false);
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
     const [mostrarNicotina, setMostrarNicotina] = useState(false);
@@ -45,13 +45,16 @@ function FormInventario() {
     return (
         <>
             <Button
-                className={styles.button}
-                sx={{ color: "currentColor", border: "1px solid currentColor", borderRadius: 10, width: 'fit-content' }}
-                variant="outlined"
-                startIcon={<Add />}
+                size="small"
+                color="primary"
                 onClick={handleOpen}
+                sx={{
+                    borderRadius: 1,
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                    '&:hover': { backgroundColor: 'rgba(0, 0, 0, 0.7)' }
+                }}
             >
-                AGREGAR PRODUCTO
+                Editar
             </Button>
 
             <Modal open={open} onClose={handleClose} >
@@ -85,7 +88,7 @@ function FormInventario() {
                     }}
                 >
                     <Typography variant="h4" sx={{ textAlign: "center", marginBottom: 2, borderBottom: "1px solid #FFF", }}>
-                        NUEVO PRODUCTO
+                        EDITANDO PRODUCTO...
                     </Typography>
 
 
@@ -335,7 +338,7 @@ function FormInventario() {
                                         "&:hover": { backgroundColor: "#5595E9" }
                                     }}
                                 >
-                                    AGREGAR PRODUCTO
+                                    EDITAR
                                 </Button>
 
                                 <Button
@@ -354,4 +357,4 @@ function FormInventario() {
     );
 }
 
-export default FormInventario;
+export default FormEditInv;
