@@ -22,7 +22,7 @@ function ContactoPage() {
 
                     alignItems: "center",
                     borderRadius: '15px',
-                    marginTop: '20px',
+                    padding: '90px 0',
                     width: '100%'
                 }}
             >

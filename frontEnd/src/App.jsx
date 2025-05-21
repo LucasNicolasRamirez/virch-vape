@@ -18,6 +18,7 @@ import './App.css';
 import { ProductosPage } from './Pages/ProductosPage';
 import VerificadorEdad from './Components/VerificadorEdad/VerificadorEdad';
 import NotFound from './Components/NotFound/NotFound';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function AppContent() {
     const [loading, setLoading] = useState(false);
@@ -33,7 +34,7 @@ function AppContent() {
     }, [pathname]);
 
 
-    
+
     return (
         <div className={styles.cuerpo}>
             <Header />
@@ -41,6 +42,7 @@ function AppContent() {
                 {loading ? <Loader /> : (
                     <div className={styles.contenido}>
                         <VerificadorEdad />
+                        <ScrollToTop />
                         <Routes>
                             <Route path="*" element={<NotFound />} />
                             <Route path='/' element={<Home />} />
@@ -74,7 +76,13 @@ function App() {
     return (
         <ProveedorTema>
             <Router>
-                {loading ? <VirchVapeLoader /> : <AppContent />}
+                {loading ? (
+                    <VirchVapeLoader />
+                ) : (
+                    <>
+                        <AppContent />
+                    </>
+                )}
             </Router>
         </ProveedorTema>
     );
