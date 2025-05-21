@@ -39,6 +39,7 @@ function GaleriaImagenes() {
                 autoplay={{ delay: 4000 }}
                 effect="slide"
                 centeredSlides={true}
+                allowTouchMove={false} 
             >
                 {galleryImages.map((image) => (
                     <SwiperSlide key={image.id}>
